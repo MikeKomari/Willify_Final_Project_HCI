@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow";
+}
+.preloaderWrapper {
+  background-color: #78726d;
+  height: 100vh;
+  display: inline-block;
+
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+.curtainBox {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 300;
+
+  /* transform: scale(2);
+    transition: transform 0.5s ease; */
+}
+
+@keyframes curtain {
+  25% {
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    top: 0;
+  }
+
+  35% {
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    top: 0;
+  }
+
+  75% {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    /* transform: scale(1.5); */
+    top: 0;
+  }
+  90% {
+    border-bottom-left-radius: 90%;
+    border-bottom-right-radius: 90%;
+    top: 0;
+  }
+  100% {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    top: -40rem;
+    /* background-color: black; */
+  }
+}
+
+.curtainAnimation {
+  animation: curtain 3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes zoom {
+  100% {
+    transform: scale(2);
+  }
+}
+
+.textWrapper {
+  display: inline-block;
+}
+
+.textInWrapper {
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 300;
+
+  color: white;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 3px;
+
+  border-right: 5px solid;
+  width: 100%;
+  max-width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes fading {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.textWrapper__h3--Indo {
+  animation: fadeIn 0.3s ease-in-out, typing 3s steps(40),
+    cursor 0.4s step-end infinite alternate, fading 1.3s ease 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--English {
+  animation: fadeIn 0.3s ease-in-out 4.5s, typing 3s steps(40) 4.5s,
+    cursor 0.4s step-end infinite alternate 4.5s, fading 1.3s ease 6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--Chinese {
+  animation: fadeIn 0.3s ease-in-out 9s, typing 3s steps(40) 9s,
+    cursor 0.4s step-end infinite alternate 9s, fading 1.3s ease 10s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--Japanese {
+  animation: fadeIn 0.3s ease-in-out 13.5s, typing 3s steps(40) 13.5s,
+    cursor 0.4s step-end infinite alternate 13.5s, fading 1.3s ease 15s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--France {
+  animation: fadeIn 0.3s ease-in-out 18s, typing 3s steps(40) 18s,
+    cursor 0.4s step-end infinite alternate 18s, fading 1.3s ease 19s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--Hawaii {
+  animation: fadeIn 0.3s ease-in-out 22.5s, typing 3s steps(40) 22.5s,
+    cursor 0.4s step-end infinite alternate 22.5s, fading 1.3s ease 24s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.textWrapper__h3--Welcome {
+  font-size: 2rem;
+  animation: fadeIn 2.5s ease-in-out 25.5s, fading 1.3s ease 29s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  border: none;
+  /* animation: fadeIn 3s ease 27s, fading 2s ease 31s; */
+}

@@ -1,0 +1,29 @@
+:root {
+  --one: #78726d;
+  --two: #abd7c4;
+  --three: #ddf8e8;
+  --four: #faf9f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", "Space Mono";
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  scale: 0.7;
+  background-color: transparent;
+}
+
+.logo__image {
+  background-color: transparent;
+}
+
+.logo__title {
+  background-color: transparent;
+}
