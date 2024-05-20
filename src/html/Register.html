@@ -6,12 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;7007800;900&display=swap"
+      href="htps://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="/public/images/Logo.png" />
-    <link rel="stylesheet" href="/src/css/Register.css" />
-    <link rel="stylesheet" href="/src/css/MainStyles.css" />
+    <link rel="stylesheet" href="../css/Register.css" />
+    <link rel="stylesheet" href="../css/MainStyles.css" />
+    <script defer src="../js/Register.js" type="module"></script>
     <title>Willify</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
 
     <!-- main -->
     <div class="ContentWrapper">
-      <div class="decoration">
+      <div class="item-1 decoration">
         <p class="decoration__paragraph">
           Personalize Your Playlist and Connect With Other Users From All Around
           The World
@@ -41,7 +42,160 @@
           <h1 class="logo__title">Willify</h1>
         </div>
       </div>
-      <div class="content"></div>
+      <div class="item-2 registration">
+        <div class="regisWrapper">
+          <h1 class="content__title">Sign Up</h1>
+          <p class="regis-text regis__desc">
+            Please complete to create your account.
+          </p>
+
+          <!-- form -->
+          <form class="form" action="/" method="GET">
+            <!-- Name -->
+            <div class="form__control">
+              <input
+                class="register__input register__input--name"
+                type="text"
+                name=""
+                id="firstName"
+                placeholder="First Name"
+              />
+              <input
+                class="register__input register__input--name"
+                type="text"
+                name=""
+                id="secondName"
+                placeholder="Second Name"
+              />
+            </div>
+
+            <!-- Age & Gender -->
+            <div class="form__controlerAge age__gender">
+              <div class="form__controlAgeGender">
+                <div class="register__ageInput ageInputControl">
+                  <label for="ageInput"
+                    >Age <span class="requiredForm">*</span></label
+                  >
+                  <input type="number" class="" name="ageInput" id="ageInput" />
+                </div>
+                <h5 class="form__errorMessage--Age--Gender--Term">
+                  Please input the required form.
+                </h5>
+              </div>
+
+              <div class="form__controlAgeGender">
+                <div class="register__genderInput genderInputControl">
+                  <label for="genderInput">Gender <span>*</span></label>
+                  <select
+                    name="genderInputs"
+                    class="genderInput"
+                    id="genderInput"
+                  >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="secret">Rather not say</option>
+                  </select>
+                </div>
+                <h5 class="form__errorMessage--Age--Gender--Term">
+                  Please input the required form.
+                </h5>
+              </div>
+            </div>
+
+            <!-- username -->
+            <div class="form__controler">
+              <div class="form__control usernameInputControl">
+                <input
+                  class="register__input"
+                  type="username"
+                  name="usernameInput"
+                  id="usernameInput"
+                  placeholder="Username"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+              <h5 class="form__errorMessage hidden">
+                Please input the required form.
+              </h5>
+            </div>
+
+            <!-- email -->
+            <div class="form__controler">
+              <div class="form__control emailInputControl">
+                <input
+                  class="register__input"
+                  type="email"
+                  name="emailInput"
+                  id="emailInput"
+                  placeholder="Email"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+              <h5 class="form__errorMessage hidden">
+                Please input the required form.
+              </h5>
+            </div>
+
+            <!-- password -->
+            <div class="form__controler">
+              <div class="form__control passInputControl">
+                <input
+                  class="register__input"
+                  type="password"
+                  name="passInput"
+                  id="passInput"
+                  placeholder="Password"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+              <h5 class="form__errorMessage hidden">
+                Please input the required form.
+              </h5>
+            </div>
+
+            <!-- password confirmation -->
+            <div class="form__controler">
+              <div class="form__control pass2InputControl">
+                <input
+                  class="register__input"
+                  type="password"
+                  name="pass2Input"
+                  id="pass2Input"
+                  placeholder="Confirm Password"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+            </div>
+
+            <!-- agree to term -->
+            <div class="form__controler">
+              <div class="form__control register__term termsInputControl">
+                <input type="checkbox" name="term" id="term" />
+                <label for="term"
+                  >I agree to all statements in
+                  <span><a href="#">terms of service. </a></span></label
+                >
+                <span class="requiredForm">*</span>
+              </div>
+              <h5 class="form__errorMessage--Age--Gender--Term">
+                Please input the required form.
+              </h5>
+            </div>
+
+            <!-- submit -->
+            <div class="form__control register__submit">
+              <!-- <a href="HomePage.html" class="submitButton">Register</a> -->
+              <a href="#" class="submitButton">Register</a>
+              <label for="submitButton"
+                ><a href="#">I already have an account.</a></label
+              >
+            </div>
+          </form>
+          <h2 class="copyright__text">
+            2024 Komari Software Properties. All Rights Reserved
+          </h2>
+        </div>
+      </div>
     </div>
   </body>
 </html>

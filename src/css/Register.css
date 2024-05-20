@@ -1,11 +1,7 @@
-* {
-  background-color: var(--four);
-}
-
 .back-button__container {
   width: 100%;
   max-width: 1600px;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 .backButton img {
@@ -15,31 +11,40 @@
 body {
   /* display: grid; */
   /* place-items: center; */
+  background-color: var(--four);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 .ContentWrapper {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* margin-top: 3rem; */
 
   width: 1100px;
   height: 747px;
-  max-width: 100%;
-  border-radius: 15px;
+}
+
+.item-1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+
+.item-2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
   background-color: white;
 }
 
 .decoration {
-  width: 50%;
   height: auto;
+  max-height: 100%;
   background-color: var(--two);
+  border-radius: 15px;
 
   display: flex;
   justify-content: center;
@@ -47,21 +52,177 @@ body {
   flex-direction: column;
 }
 
-.decoration img {
-  background-color: transparent;
+.decoration__image {
+  position: relative;
+  right: 3.3rem;
 }
 
 .decoration__paragraph {
+  padding-top: 5rem;
+  padding-bottom: 0.3rem;
   text-align: center;
   width: 75%;
   max-width: 100%;
   font-weight: 700;
   font-size: 20px;
-  background-color: transparent;
 }
 
-/* .backButton a {
-  text-decoration: none;
-  color: black;
+.decoration__logo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+}
+
+.regisWrapper {
+  height: 100%;
+  position: relative;
+  padding: 4.6rem 0rem 0.5rem 0rem;
+}
+
+.content__title {
+  font-size: 42px;
+}
+
+.regis-text {
+  color: #78726d;
+  font-size: 12px;
+}
+
+.regis__desc {
+  font-weight: 300;
   font-size: 16px;
-} */
+  padding-top: 8px;
+  padding-bottom: 25px;
+}
+
+.form {
+  padding-left: 20px;
+}
+
+.register__input {
+  color: #78726d;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid 1px #bbbbbb;
+  border-radius: 1px;
+  gap: 10px;
+  outline: #78726d;
+  margin: 25px 0;
+  max-width: 100%;
+  width: 100%;
+  /* padding-top: 50px; */
+}
+
+.form__controler {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__controlAgeGender {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__control {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.form__control--name {
+  width: auto !important;
+  display: flex !important;
+}
+
+.age__gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #78726d; */
+  height: 100%;
+  width: 93%;
+  max-width: 100%;
+
+  color: #78726d;
+}
+
+.form__errorMessage {
+  color: red;
+  font-size: 8px;
+  margin-top: -1.2rem;
+}
+
+.form__errorMessage--Age--Gender--Term {
+  color: red;
+  font-size: 8px;
+}
+
+.register__ageInput {
+  display: flex;
+}
+
+#ageInput {
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#genderInput {
+  outline: none;
+}
+
+.requiredForm {
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 40%;
+  margin-right: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.register__submit {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.submitButton {
+  padding: 8px 20px;
+  color: white;
+  font-weight: 600;
+  background-color: var(--one);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.copyright__text {
+  color: black;
+  opacity: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: end;
+  /* position: absolute;
+  bottom: 1.2rem;
+  right: 4rem; */
+}

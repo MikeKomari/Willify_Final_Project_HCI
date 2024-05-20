@@ -15,6 +15,7 @@
 .logo {
   display: flex;
   align-items: center;
+  max-width: fit-content;
   gap: 0.5rem;
   scale: 0.7;
   background-color: transparent;
@@ -26,4 +27,8 @@
 
 .logo__title {
   background-color: transparent;
+}
+
+.hidden {
+  display: none;
 }
