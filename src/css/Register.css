@@ -124,6 +124,10 @@ body {
   /* padding-top: 50px; */
 }
 
+/* .register__input:hover {
+  padding-left: 5px;
+} */
+
 .form__controler {
   display: flex;
   flex-direction: column;

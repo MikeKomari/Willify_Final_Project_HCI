@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll("[data-form-input]");
 const submitButton = document.querySelector(".submitButton");
 
 //error message sedikit berbeda
-const specialInputs = ["ageInput", "genderInput", "termsInput"];
+const specialInputs = ["age", "gender", "terms"];
 
 //object yang mengisi semua error message, daripada satu satu di define
 const errorMessages = {
@@ -14,29 +14,45 @@ const errorMessages = {
 
   default: `<h5 class="form__errorMessage">Please input the required form.</h5>`,
 
-  email: `<h5 class="form__errorMessage">Please input with the right format.</h5>`,
+  email: `<h5 class="form__errorMessage emailRegex">Email should be in the right format(name@company.dom).</h5>`,
 
-  password: `<h5 class="form__errorMessage">Please input the required form.</h5>`,
+  password: `<h5 class="form__errorMessage passRegex">Password should be 8 characters long, 1 digit, 1 upper and lowercase, 1 special character.</h5>`,
+
+  password2: `<h5 class="form__errorMessage pass2Regex">Password does not match.</h5>`,
+
+  terms: `<h5 class="form__errorMessage terms">Password agree to the terms of service.</h5>`,
 };
 
 const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
+const passwordRegex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 //array untuk mengisi
 let errorControl = [];
 
-function errorInput(inputForParameter, errorMessageClass) {
-  const existingErrorMessage = document.querySelector(
-    `.${inputForParameter}Control + ${errorMessageClass}`
+//Mengambil variabel error yang mana, misalnya email, lalu mengambil class untuk validasi apakah ada errorMessage, jika ada, tidak di print kembali.
+//lalu mengambil message yang ingin di display, yang di passing dari object errorMessages
+function errorInput(
+  inputForParameter,
+  errorMessageClass,
+  errorMessageDisplayed
+) {
+  const errorElement = document.querySelector(
+    `.${inputForParameter}InputControl`
   );
 
-  if (existingErrorMessage) {
-    existingErrorMessage.remove();
+  const existingErrorMessage = document.querySelector(
+    `.${inputForParameter}InputControl + ${errorMessageClass}`
+  );
+
+  if (!existingErrorMessage) {
+    errorElement.insertAdjacentHTML("afterend", errorMessageDisplayed);
   }
 }
 
 function errorValidationPassed(inputForParameter, errorMessageClass) {
   const existingErrorMessage = document.querySelector(
-    `.${inputForParameter}Control + ${errorMessageClass}`
+    `.${inputForParameter}InputControl + ${errorMessageClass}`
   );
 
   if (existingErrorMessage) {
@@ -49,9 +65,12 @@ const submit = submitButton.addEventListener("click", function (e) {
 
   const formValue = {};
 
+  const newAccount = {};
+
   inputs.forEach((input) => {
     const inputForParameter = input.dataset.formInput;
     const formRule = input.dataset.formRule;
+    let errorMessageClass;
 
     //Validasi apakah ada input atau tidak
     if (formRule === "requiredToFill") {
@@ -67,29 +86,70 @@ const submit = submitButton.addEventListener("click", function (e) {
 
         const isSpecialInput = specialInputs.includes(inputForParameter);
 
-        const errorMessageClass = isSpecialInput
+        errorMessageClass = isSpecialInput
           ? `.form__errorMessage--Age--Gender--Term`
           : `.form__errorMessage`;
 
         errorValidationPassed(inputForParameter, errorMessageClass);
+
+        newAccount[`${inputForParameter}`] = input.value;
       }
+    } else {
+      newAccount[`${inputForParameter}`] = input.value;
     }
 
     //validasi email
-    if (inputForParameter === "emailInput") {
+    if (inputForParameter === "email") {
       if (emailRegex.test(input.value)) {
+        newAccount[`${inputForParameter}`] = input.value;
         return;
       } else {
+        errorMessageClass = `.form__errorMessage .emailRegex`;
+        errorInput(inputForParameter, errorMessageClass, errorMessages.email);
+      }
+    }
+
+    //validasi password
+    if (inputForParameter === "pass") {
+      if (passwordRegex.test(input.value)) {
+        newAccount[`${inputForParameter}`] = input.value;
+        return;
+      } else {
+        errorMessageClass = `.form__errorMessage .passRegex`;
+        errorInput(
+          inputForParameter,
+          errorMessageClass,
+          errorMessages.password
+        );
+      }
+    }
+
+    //validasdi pass confirmation
+    if (inputForParameter === "pass2") {
+      if (newAccount["pass"] && newAccount["pass2"]) {
+        errorMessageClass = `.form__errorMessage .pass2Regex`;
+        if (newAccount["pass"] !== newAccount["pass2"]) {
+          errorInput(
+            inputForParameter,
+            errorMessageClass,
+            errorMessages.password2
+          );
+          return;
+        } else {
+          newAccount[`${inputForParameter}`] = input.value;
+          errorValidationPassed(inputForParameter, errorMessageClass);
+        }
       }
     }
   });
-  console.log(errorControl);
-  showError(errorControl);
+
+  accounts.push(newAccount);
+  // console.log(newAccount);
+  // showError(errorControl);
 });
 
 function showError(errorControl) {
   errorControl.forEach((errorValue) => {
-    const errorElement = document.querySelector(`.${errorValue}Control`);
     let errorMessageTemp;
     let errorMessageClass;
 
@@ -104,12 +164,10 @@ function showError(errorControl) {
     const existingErrorMessage = document.querySelector(
       `.${errorValue}Control + ${errorMessageClass}`
     );
-    if (!existingErrorMessage) {
-      errorElement.insertAdjacentHTML("afterend", errorMessageTemp);
-    }
+    errorInput(errorValue, errorMessageClass, errorMessageTemp);
   });
 }
-
+console.log(accounts);
 /*
 if (
       errorValue === "ageInput" ||
