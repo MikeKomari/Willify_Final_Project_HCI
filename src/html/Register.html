@@ -12,15 +12,16 @@
     <link rel="icon" href="/public/images/Logo.png" />
     <link rel="stylesheet" href="../css/Register.css" />
     <link rel="stylesheet" href="../css/MainStyles.css" />
-    <script defer src="../js/Register.js" type="module"></script>
+    <!-- <script defer src="../js/Register.js" type="module"></script> -->
+    <script defer src="../js/Registers.js" type="module"></script>
     <title>Willify</title>
   </head>
   <body>
     <!-- BackButtonToHomepage -->
     <div class="back-button__container">
       <div class="backButton">
-        <a href="index.html"
-          ><img src="/public/images/BackRegisterLogin.png" alt=""
+        <a href="../../index.html"
+          ><img src="../../public/images/BackRegisterLogin.png" alt=""
         /></a>
       </div>
     </div>
@@ -34,11 +35,11 @@
         </p>
         <img
           class="decoration__image"
-          src="/public/images/RegisterPicture.png"
+          src="../../public/images/RegisterPicture.png"
           alt=""
         />
         <div class="logo decoration__logo">
-          <img class="logo__image" src="/public/images/Logo.png" alt="" />
+          <img class="logo__image" src="../../public/images/Logo.png" alt="" />
           <h1 class="logo__title">Willify</h1>
         </div>
       </div>
@@ -76,29 +77,30 @@
                   <label for="ageInput"
                     >Age <span class="requiredForm">*</span></label
                   >
-                  <input type="number" class="" name="ageInput" id="ageInput" />
+                  <input
+                    type="number"
+                    min="0"
+                    data-form-input="ageInput"
+                    data-form-rule="requiredToFill"
+                    name="ageInput"
+                    id="ageInput"
+                  />
                 </div>
-                <h5 class="form__errorMessage--Age--Gender--Term">
-                  Please input the required form.
-                </h5>
               </div>
-
               <div class="form__controlAgeGender">
                 <div class="register__genderInput genderInputControl">
                   <label for="genderInput">Gender <span>*</span></label>
                   <select
                     name="genderInputs"
-                    class="genderInput"
                     id="genderInput"
+                    data-form-input="genderInput"
+                    data-form-rule="requiredToFill"
                   >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="secret">Rather not say</option>
                   </select>
                 </div>
-                <h5 class="form__errorMessage--Age--Gender--Term">
-                  Please input the required form.
-                </h5>
               </div>
             </div>
 
@@ -111,12 +113,11 @@
                   name="usernameInput"
                   id="usernameInput"
                   placeholder="Username"
+                  data-form-input="usernameInput"
+                  data-form-rule="requiredToFill"
                 />
                 <span class="requiredForm">*</span>
               </div>
-              <h5 class="form__errorMessage hidden">
-                Please input the required form.
-              </h5>
             </div>
 
             <!-- email -->
@@ -127,13 +128,12 @@
                   type="email"
                   name="emailInput"
                   id="emailInput"
+                  data-form-input="emailInput"
+                  data-form-rule="requiredToFill"
                   placeholder="Email"
                 />
                 <span class="requiredForm">*</span>
               </div>
-              <h5 class="form__errorMessage hidden">
-                Please input the required form.
-              </h5>
             </div>
 
             <!-- password -->
@@ -145,12 +145,11 @@
                   name="passInput"
                   id="passInput"
                   placeholder="Password"
+                  data-form-input="passInput"
+                  data-form-rule="requiredToFill"
                 />
                 <span class="requiredForm">*</span>
               </div>
-              <h5 class="form__errorMessage hidden">
-                Please input the required form.
-              </h5>
             </div>
 
             <!-- password confirmation -->
@@ -161,6 +160,8 @@
                   type="password"
                   name="pass2Input"
                   id="pass2Input"
+                  data-form-input="pass2Input"
+                  data-form-rule="requiredToFill"
                   placeholder="Confirm Password"
                 />
                 <span class="requiredForm">*</span>
@@ -170,16 +171,19 @@
             <!-- agree to term -->
             <div class="form__controler">
               <div class="form__control register__term termsInputControl">
-                <input type="checkbox" name="term" id="term" />
+                <input
+                  type="checkbox"
+                  name="term"
+                  id="term"
+                  data-form-input="termsInput"
+                  data-form-rule="requiredToFill"
+                />
                 <label for="term"
                   >I agree to all statements in
                   <span><a href="#">terms of service. </a></span></label
                 >
                 <span class="requiredForm">*</span>
               </div>
-              <h5 class="form__errorMessage--Age--Gender--Term">
-                Please input the required form.
-              </h5>
             </div>
 
             <!-- submit -->

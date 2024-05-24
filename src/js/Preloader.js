@@ -17,12 +17,12 @@ const pageContent = document.querySelector(".wrapper");
 function curtainTesting() {
   setTimeout(() => {
     preLoader.classList.add("curtainAnimation");
-  }, 31300);
+  }, 9200);
 
   setTimeout(() => {
     preLoaderContainer.classList.add("hidden");
     pageContent.classList.add("visible");
-  }, 34300);
+  }, 12200);
 }
 
 curtainTesting();

@@ -32,7 +32,7 @@ Please input the required form.
 </h5>
 `;
 
-const errorMessageRemoval = `<h5 class="form__errorMessage"></h5>
+const errorMessageRemoval = `
 `;
 
 // Login Accounts Control
@@ -53,12 +53,15 @@ const submit = submitButton.addEventListener("click", function (e) {
   const passInputValue = passInput.value;
   const pass2InputValue = pass2Input.value;
 
+  // let usnFlag = 0;
   if (!usernameInputValue) {
-    // formErrors.push("usernameControl");
     usernameControl.insertAdjacentHTML("afterend", errorMessage);
     return;
-  } else {
-    // usernameControl.insertAdjacentHTML("afterend", errorMessageRemoval);
+  } else if (usernameInputValue) {
+    let errorMessageElement = document.getElementById("error-message");
+    if (errorMessageElement) {
+      errorMessageElement.parentNode.removeChild(errorMessageElement);
+    }
   }
 
   console.log(

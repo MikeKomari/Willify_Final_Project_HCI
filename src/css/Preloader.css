@@ -121,50 +121,50 @@
 }
 
 .textWrapper__h3--Indo {
-  animation: fadeIn 0.3s ease-in-out, typing 3s steps(40),
-    cursor 0.4s step-end infinite alternate, fading 1.3s ease 2s;
+  animation: fadeIn 0.2s ease-in-out, typing 1.3s steps(40),
+    cursor 0.4s step-end infinite alternate, fading 0.4s ease 0.6s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--English {
-  animation: fadeIn 0.3s ease-in-out 4.5s, typing 3s steps(40) 4.5s,
-    cursor 0.4s step-end infinite alternate 4.5s, fading 1.3s ease 6s;
+  animation: fadeIn 0.2s ease-in-out 1.2s, typing 1.3s steps(40) 1.2s,
+    cursor 0.4s step-end infinite alternate 1.2s, fading 0.4s ease 1.6s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--Chinese {
-  animation: fadeIn 0.3s ease-in-out 9s, typing 3s steps(40) 9s,
-    cursor 0.4s step-end infinite alternate 9s, fading 1.3s ease 10s;
+  animation: fadeIn 0.2s ease-in-out 2.4s, typing 1.3s steps(40) 2.4s,
+    cursor 0.4s step-end infinite alternate 2.4s, fading 0.4s ease 2.8s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--Japanese {
-  animation: fadeIn 0.3s ease-in-out 13.5s, typing 3s steps(40) 13.5s,
-    cursor 0.4s step-end infinite alternate 13.5s, fading 1.3s ease 15s;
+  animation: fadeIn 0.2s ease-in-out 3.6s, typing 1.7s steps(40) 3.6s,
+    cursor 0.4s step-end infinite alternate 3.6s, fading 0.4s ease 4s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--France {
-  animation: fadeIn 0.3s ease-in-out 18s, typing 3s steps(40) 18s,
-    cursor 0.4s step-end infinite alternate 18s, fading 1.3s ease 19s;
+  animation: fadeIn 0.2s ease-in-out 4.6s, typing 1.3s steps(40) 4.6s,
+    cursor 0.4s step-end infinite alternate 4.6s, fading 0.4s ease 5.2s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--Hawaii {
-  animation: fadeIn 0.3s ease-in-out 22.5s, typing 3s steps(40) 22.5s,
-    cursor 0.4s step-end infinite alternate 22.5s, fading 1.3s ease 24s;
+  animation: fadeIn 0.2s ease-in-out 5.8s, typing 1.7s steps(40) 5.8s,
+    cursor 0.4s step-end infinite alternate 5.8s, fading 0.4s ease 6.2s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .textWrapper__h3--Welcome {
   font-size: 2rem;
-  animation: fadeIn 2.5s ease-in-out 25.5s, fading 1.3s ease 29s;
+  animation: fadeIn 2.5s ease-in-out 7s, fading 1.3s ease 9s;
   animation-fill-mode: forwards;
   opacity: 0;
   border: none;
