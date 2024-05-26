@@ -20,8 +20,8 @@ function curtainTesting() {
   }, 9200);
 
   setTimeout(() => {
-    preLoaderContainer.classList.add("hidden");
-    pageContent.classList.add("visible");
+    preLoaderContainer.classList.add("hiddenPreloader");
+    pageContent.classList.add("visiblePreloader");
   }, 12200);
 }
 
@@ -29,6 +29,6 @@ curtainTesting();
 //click to skip (ide)
 
 preLoader.addEventListener("dblclick", function (e) {
-  preLoaderContainer.classList.add("hidden");
-  pageContent.classList.add("visible");
+  preLoaderContainer.classList.add("hiddenPreloader");
+  pageContent.classList.add("visiblePreloader");
 });

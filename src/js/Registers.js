@@ -4,11 +4,11 @@ const inputs = document.querySelectorAll("[data-form-input]");
 const submitButton = document.querySelector(".submitButton");
 
 //error message sedikit berbeda
-const specialInputs = ["age", "gender", "terms"];
+const specialInputs = ["age", "gender"];
 
 //object yang mengisi semua error message, daripada satu satu di define
 const errorMessages = {
-  ageGenderTerm: `<h5 class="form__errorMessage--Age--Gender--Term">
+  ageGenderTerm: `<h5 class="form__errorMessage--Age--Gender">
     Please input the required form.
   </h5>`,
 
@@ -20,7 +20,7 @@ const errorMessages = {
 
   password2: `<h5 class="form__errorMessage pass2Regex">Password does not match.</h5>`,
 
-  terms: `<h5 class="form__errorMessage terms">Password agree to the terms of service.</h5>`,
+  terms: `<h5 class="form__errorMessage--Age--Gender terms">Please agree to the terms of service.</h5>`,
 };
 
 const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
@@ -144,8 +144,8 @@ const submit = submitButton.addEventListener("click", function (e) {
   });
 
   accounts.push(newAccount);
-  // console.log(newAccount);
-  // showError(errorControl);
+  console.log(errorControl);
+  showError(errorControl);
 });
 
 function showError(errorControl) {
@@ -155,19 +155,18 @@ function showError(errorControl) {
 
     if (specialInputs.includes(errorValue)) {
       errorMessageTemp = errorMessages.ageGenderTerm;
-      errorMessageClass = ".form__errorMessage--Age--Gender--Term";
+      errorMessageClass = ".form__errorMessage--Age--Gender";
+    } else if (errorValue === "terms") {
+      errorMessageTemp = errorMessages.terms;
+      errorMessageClass = `.form__errorMessage--Age--Gender .terms`;
     } else {
       errorMessageTemp = errorMessages.default;
       errorMessageClass = ".form__errorMessage";
     }
 
-    const existingErrorMessage = document.querySelector(
-      `.${errorValue}Control + ${errorMessageClass}`
-    );
     errorInput(errorValue, errorMessageClass, errorMessageTemp);
   });
 }
-console.log(accounts);
 /*
 if (
       errorValue === "ageInput" ||

@@ -167,15 +167,15 @@ body {
 
 .form__errorMessage {
   color: red;
-  font-size: 8px;
+  font-size: 10px;
   /* background-color: aqua; */
   position: absolute;
   margin-top: 3rem;
 }
 
-.form__errorMessage--Age--Gender--Term {
+.form__errorMessage--Age--Gender {
   color: red;
-  font-size: 8px;
+  font-size: 10px;
   position: absolute;
   margin-top: 2rem;
 }

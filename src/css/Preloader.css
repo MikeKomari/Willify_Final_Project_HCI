@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Barlow";
-}
 .preloaderWrapper {
   background-color: #78726d;
   height: 100vh;
@@ -62,7 +56,7 @@
   animation: curtain 3s ease;
 }
 
-.hidden {
+.hiddenPreloader {
   opacity: 0;
   visibility: hidden;
 }
@@ -170,3 +164,12 @@
   border: none;
   /* animation: fadeIn 3s ease 27s, fading 2s ease 31s; */
 }
+
+.wrapper.visiblePreloader {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+/*
+*/

@@ -1,0 +1,55 @@
+.pop-up-wrapper {
+  position: absolute;
+  width: 25rem;
+  max-width: 100%;
+  padding: 1rem 1.5rem;
+  /* width: 300px;
+    height: 250px; */
+  border-radius: 15px;
+  top: 5.3rem;
+  right: -2.5rem;
+  border: 1px solid hsl(223, 64%, 98%);
+  background-color: white;
+  -webkit-box-shadow: 2px 7px 47px -9px rgba(161, 152, 161, 0.42);
+  -moz-box-shadow: 2px 7px 47px -9px rgba(161, 152, 161, 0.42);
+  box-shadow: 2px 7px 47px -9px rgba(161, 152, 161, 0.42);
+
+  z-index: 999;
+}
+
+.cart_text {
+  padding: 10px 0 25px 25px;
+}
+
+.pop-up {
+  display: block;
+}
+
+.linebreak2 {
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(128, 128, 128, 0.137);
+}
+
+.pop-up_content_empty {
+  /* height: 95px;
+    padding-top: 4rem; */
+  display: grid;
+  place-items: center;
+}
+
+.empty_text {
+  color: hsl(219, 9%, 45%);
+  padding: 5rem 0;
+}
+
+.pop-up-items-wrapper {
+  display: none;
+}
+
+.linebreak {
+  width: 100%;
+  height: 0.4rem;
+  background-color: rgba(128, 128, 128, 0.137);
+  margin-top: 7rem;
+}

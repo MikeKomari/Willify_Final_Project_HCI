@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/Preloader.css" />
     <link rel="stylesheet" href="src/css/MainStyles.css" />
+    <link rel="stylesheet" href="src/css/Index.css" />
+    <link rel="stylesheet" href="src/css/Cart.css" />
+
     <script defer src="src/js/Preloader.js" type="module"></script>
+    <script defer src="src/js/Cart.js" type="module"></script>
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -39,7 +43,180 @@
     </div>
 
     <div class="wrapper">
-      <nav></nav>
+      <div class="pop-up-wrapper">
+        <div class="pop-up">
+          <h3 class="cart_text">Cart</h3>
+          <div class="linebreak2"></div>
+
+          <!-- if pop up is empty -->
+          <div class="pop-up_content_empty">
+            <h4 class="empty_text">Your cart is empty.</h4>
+          </div>
+          <!-- if pop up has items in it
+            show this instead of the above div -->
+          <!-- BEFOREBEGIN -->
+          <div class="cart__container items">
+            <!-- AFTERBEGIN -->
+            <button class="checkout hidden">Checkout</button>
+            <!-- BEFOREEND -->
+          </div>
+          <!-- AFTEREND -->
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html"
+          ><div class="navbar__logoDiv">
+            <img
+              class="navbar__logoImage"
+              src="public/images/Logo.png"
+              alt="Willify Logo"
+            />
+            <h1 class="navbar__text">WILLIFY</h1>
+          </div></a
+        >
+
+        <div class="navbar__nav">
+          <a href="index.html"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Home</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Collection</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Home</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">About</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+        </div>
+
+        <div class="navbar__extraNav">
+          <img
+            class="navbar__navCart"
+            src="../Code/public/images/cart.png"
+            alt=""
+          />
+          <div class="navbar__navSeperator"></div>
+          <div class="navbar__account">
+            <a href="#"
+              ><button class="buttonOne navbar__buttonLogin">Log In</button></a
+            >
+            <a href="../Code/src/html/Register.html"
+              ><button class="buttonOne navbar__buttonRegister">
+                Register
+              </button></a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="pageBreak"></div>
+
+      <!-- main content -->
+      <div class="container">
+        <div class="item content__bestSale">
+          <div class="content__checkItOutBar">
+            <h3 class="content__checkItOutBar__Text">Check It Out!</h3>
+            <img
+              class="content__checkItOutBar__Arrow"
+              src="public/images/arrow.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item content__quote"></div>
+        <div class="item content__newSurprise">
+          <a class="linkArrow newSurprise" href="#">
+            <div class="linkArrowNewSurprise">
+              <img
+                class="linkArrowImage"
+                src="public/images/Upper right Arrow.png"
+                alt=""
+              />
+            </div>
+          </a>
+          <div class="newSurprise__Container">
+            <h2 class="newSurprise__titleText">NEW SURPRISE!</h2>
+            <div class="pageBreak pageBreak__quotes"></div>
+            <div class="newSurprise__everyDayText">
+              <h3 class="newSurprise__everyDayText--Text">EVERY DAY</h3>
+              <img src="../Code/public/images/Arrow 3.png" alt="" />
+            </div>
+            <div class="newSurprise__heroText">
+              <h1 class="heroText__title">SONGS</h1>
+              <h3 class="heroText__desc">JUST FOR YOU</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item content__trending">
+          <a class="linkArrow trending" href="#">
+            <div class="linkArrowtrending">
+              <img
+                class="linkArrowImage"
+                src="public/images/Upper right Arrow.png"
+                alt=""
+              />
+            </div>
+          </a>
+          <div class="trending__text">
+            <h3 class="trending__quotes">
+              We are dedicated to expanding and spreading the love for music to
+              everyone.
+            </h3>
+            <div class="pageBreak pageBreak__quotes"></div>
+            <h3 class="trending__tag">#TRENDING2024</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- faq -->
+      <!-- bestSeller -->
+      <div class="bestSellerContainer">
+        <div class="bestSellerItem songOne">
+          <h2 class="rankingLabel">4th</h2>
+          <div class="songName">
+            <h3 class="songName__Text">Love Wins All - IU</h3>
+            <div class="pageBreakSong"></div>
+          </div>
+        </div>
+        <div class="bestSellerItem songTwo">
+          <h2 class="rankingLabel">2nd</h2>
+          <div class="songName">
+            <h3 class="songName__Text">NewJeans - OMG</h3>
+            <div class="pageBreakSong"></div>
+          </div>
+        </div>
+        <div class="bestSellerItem songThree">
+          <h2 class="rankingLabel">1st</h2>
+          <div class="songName">
+            <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
+            <div class="pageBreakSong"></div>
+          </div>
+        </div>
+        <div class="bestSellerItem songFour">
+          <h2 class="rankingLabel">3rd</h2>
+          <div class="songName">
+            <h3 class="songName__Text">yes, and? - Ariana Grande</h3>
+            <div class="pageBreakSong"></div>
+          </div>
+        </div>
+        <div class="bestSellerItem songFive">
+          <h2 class="rankingLabel">5th</h2>
+          <div class="songName">
+            <h3 class="songName__Text">NIKI - Anaheim</h3>
+            <div class="pageBreakSong"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

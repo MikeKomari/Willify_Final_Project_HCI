@@ -32,3 +32,72 @@
 .hidden {
   display: none;
 }
+
+.buttonOne {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 24px;
+  background-color: transparent;
+  border: 1px solid var(--one);
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes arrowFade {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(10px, -10px);
+    opacity: 0;
+  }
+  51% {
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRightFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(350deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rightToLeftFade {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(350deg);
+    opacity: 1;
+  }
+}
