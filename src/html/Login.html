@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="htps://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../public/images/Logo.png" />
+    <link rel="stylesheet" href="../css/Register.css" />
+    <link rel="stylesheet" href="../css/MainStyles.css" />
+    <link rel="stylesheet" href="../css/Login.css" />
+    <!-- <script defer src="../js/Register.js" type="module"></script> -->
+    <script defer src="../js/Login.js" type="module"></script>
+    <title>Willify - Willify(ID)</title>
+  </head>
+  <body>
+    <!-- BackButtonToHomepage -->
+    <div class="back-button__container">
+      <div class="backButton">
+        <a href="../../index.html"
+          ><img src="../../public/images/BackRegisterLogin.png" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="ContentWrapper">
+      <div class="item-1 registration">
+        <div class="regisWrapper">
+          <h1 class="content__title">Log In</h1>
+          <p class="regis-text regis__desc">
+            Welcome back! Please enter your details.
+          </p>
+
+          <!-- form -->
+          <form class="form" action="Login.html" method="GET">
+            <!-- email -->
+            <div class="form__controler">
+              <div class="form__control emailInputControl">
+                <input
+                  class="register__input"
+                  type="email"
+                  name="emailInput"
+                  id="emailInput"
+                  data-form-input="email"
+                  data-form-rule="requiredToFill"
+                  placeholder="Email"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+            </div>
+
+            <!-- password -->
+            <div class="form__controler">
+              <div class="form__control passInputControl">
+                <input
+                  class="register__input"
+                  type="password"
+                  name="passInput"
+                  id="passInput"
+                  placeholder="Password"
+                  data-form-input="pass"
+                  data-form-rule="requiredToFill"
+                />
+                <span class="requiredForm">*</span>
+              </div>
+            </div>
+            <!-- agree to term -->
+            <div class="form__controler">
+              <div class="loginRemember">
+                <div class="form__control register__term termsInputControl">
+                  <input
+                    type="checkbox"
+                    name="term"
+                    id="term"
+                    data-form-input="remember"
+                    data-form-rule="requiredToFill"
+                  />
+                  <label for="term">Remember Me</label>
+                  <!-- <span class="requiredForm">*</span> -->
+                </div>
+                <a class="login__ForgotPassword" href="#">Forgot Password.</a>
+              </div>
+            </div>
+
+            <!-- submit -->
+            <div class="form__control register__submit login__Submit">
+              <!-- <a href="HomePage.html" class="submitButton">Register</a> -->
+              <button class="submitButton submitButton--login" type="submit">
+                Log In
+              </button>
+              <div class="login__noAccount">
+                <h4 class="login__noAccount--Text">
+                  Don't have an account?
+                  <span class="login__noAccount--Text"
+                    ><a href="../html/Register.html">Sign Up.</a></span
+                  >
+                </h4>
+              </div>
+            </div>
+          </form>
+          <h2 class="copyright__text">
+            2024 Komari Software Properties. All Rights Reserved
+          </h2>
+        </div>
+      </div>
+      <div class="item-2 decoration">
+        <p class="decoration__paragraph">
+          Personalize Your Playlist and Connect With Other Users From All Around
+          The World
+        </p>
+        <img
+          class="decoration__imageLogin"
+          src="../../public/images/LoginPicture.png"
+          alt=""
+        />
+        <div class="logo decoration__logo">
+          <img class="logo__image" src="../../public/images/Logo.png" alt="" />
+          <h1 class="logo__title">Willify</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="public/images/Logo.png" />
     <link rel="stylesheet" href="src/css/Preloader.css" />
     <link rel="stylesheet" href="src/css/MainStyles.css" />
     <link rel="stylesheet" href="src/css/Index.css" />
     <link rel="stylesheet" href="src/css/Cart.css" />
+    <link rel="stylesheet" href="src/css/Sidebar.css" />
 
     <script defer src="src/js/Preloader.js" type="module"></script>
     <script defer src="src/js/Cart.js" type="module"></script>
+    <script defer src="src/js/Index.js" type="module"></script>
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -43,7 +46,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="pop-up-wrapper">
+      <div class="pop-up-wrapper hidden">
         <div class="pop-up">
           <h3 class="cart_text">Cart</h3>
           <div class="linebreak2"></div>
@@ -64,11 +67,94 @@
         </div>
       </div>
 
+      <div class="sidebar-wrapper hidden hiddenWithAnimation">
+        <div class="sidebar__content">
+          <div class="sidebar__profile">
+            <img
+              class="userImage"
+              src="../Code/public/images/User.png"
+              alt="User"
+            />
+            <div class="sidebar__username">
+              <h2 class="username__name">MICHAEL KIMEISON</h2>
+              <h2 class="username__username">@Komari54</h2>
+            </div>
+          </div>
+
+          <div class="pageBreak"></div>
+
+          <div class="featureContainer">
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../Code/public/images/User.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Account</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../Code/public/images/friends.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Friends</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../Code/public/images/uta.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Songs</h3>
+            </div>
+          </div>
+
+          <!-- account  -->
+          <div class="navbar__account sideBarMode">
+            <a href="#"
+              ><button class="buttonOne buttonSideBar navbar__buttonLogin">
+                Log In
+              </button></a
+            >
+            <a href="../Code/src/html/Register.html"
+              ><button class="buttonOne buttonSideBar navbar__buttonRegister">
+                Register
+              </button></a
+            >
+          </div>
+
+          <!-- features -->
+          <div class="navbar__nav sideBarMode">
+            <a href="index.html"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Home</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Collection</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Discover</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">About</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+          </div>
+        </div>
+      </div>
+
       <nav class="navbar">
         <a href="index.html"
           ><div class="navbar__logoDiv">
             <img
-              class="navbar__logoImage"
+              class="navbar__logoImage indexPage"
               src="public/images/Logo.png"
               alt="Willify Logo"
             />
@@ -89,7 +175,7 @@
           ></a>
           <a href="#"
             ><div class="navbar__navLink">
-              <h3 class="navbar__navText">Home</h3>
+              <h3 class="navbar__navText">Discover</h3>
               <div class="navbar__navDecor"></div></div
           ></a>
           <a href="#"
@@ -115,6 +201,11 @@
                 Register
               </button></a
             >
+          </div>
+          <div class="navbar__hamburgerMenu">
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
           </div>
         </div>
       </nav>

@@ -33,15 +33,14 @@ body {
 .item-1 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
+  background-color: x white;
+  max-width: 100%;
 }
 
 .item-2 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
-  background-color: white;
-  max-width: 100%;
 }
-
 .decoration {
   height: auto;
   max-height: 100%;

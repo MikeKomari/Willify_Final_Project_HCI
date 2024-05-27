@@ -1,0 +1,49 @@
+.decoration__imageLogin {
+  position: relative;
+  left: 1rem;
+}
+
+.loginRemember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+  width: 400px;
+  max-width: 100%;
+}
+
+.login__ForgotPassword {
+  font-size: 1rem;
+  /* background-color: violet; */
+  width: 11rem;
+}
+
+.submitButton--login {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.login__Submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+}
+
+.login__noAccount {
+  margin-top: 2rem;
+}
+
+.login__noAccount--Text {
+  font-size: 1rem;
+  color: #78726d;
+  font-weight: 200;
+}
+
+.regisWrapper {
+  padding: 10.6rem 0rem 0.5rem 0rem;
+}
+
+.copyright__text {
+  margin-top: 12.5rem !important;
+}
