@@ -63,6 +63,24 @@
   }
 }
 
+@keyframes arrowFadeRight {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(10px, 0);
+    opacity: 0;
+  }
+  51% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 @keyframes leftToRightFade {
   0% {
     opacity: 0;
@@ -160,12 +178,6 @@
     border-bottom-right-radius: 0;
     height: 100vh;
   }
-}
-
-.hiddenWithAnimation {
-  /* display: none; */
-  animation: revealContentClosing 1.5s ease forwards,
-    curtainSidebarClosing 2s ease forwards;
 }
 
 @keyframes revealContent {

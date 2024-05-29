@@ -47,3 +47,27 @@
 .copyright__text {
   margin-top: 12.5rem !important;
 }
+
+.login__invalid {
+  background-color: #fdede6;
+  border-radius: 15px;
+}
+
+.invalid__content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.invalid__image {
+  width: 15px;
+  height: 15px;
+}
+
+.invalid__text {
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  /* padding: 0.5rem 1rem; */
+}

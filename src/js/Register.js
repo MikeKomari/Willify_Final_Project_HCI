@@ -21,6 +21,8 @@ const errorMessages = {
   password2: `<h5 class="form__errorMessage pass2Regex">Password does not match.</h5>`,
 
   terms: `<h5 class="form__errorMessage--Age--Gender terms">Please agree to the terms of service.</h5>`,
+
+  username: `<h5 class="form__errorMessage--Username">Username is taken, please choose another username.</h5>`,
 };
 
 const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
@@ -96,6 +98,25 @@ const submit = submitButton.addEventListener("click", function (e) {
       }
     } else {
       newAccount[`${inputForParameter}`] = input.value;
+    }
+
+    // validasi username
+    if (inputForParameter === "username") {
+      let usernameTaken = accounts.some(
+        (account) => account.username === input.value
+      );
+
+      if (usernameTaken) {
+        errorMessageClass = `.form__errorMessage--Username`;
+        errorInput(
+          inputForParameter,
+          errorMessageClass,
+          errorMessages.username
+        );
+        return;
+      } else {
+        newAccount[`${inputForParameter}`] = input.value;
+      }
     }
 
     //validasi email

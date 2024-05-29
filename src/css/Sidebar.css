@@ -90,7 +90,7 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem !important;
 }
 
 .buttonSideBar {
@@ -101,4 +101,10 @@
 .navbar__nav.sideBarMode {
   display: flex !important;
   flex-direction: column !important;
+}
+
+.sidebar-wrapper.hiddenWithAnimation {
+  /* display: none; */
+  animation: revealContentClosing 1.5s ease forwards,
+    curtainSidebarClosing 2s ease forwards;
 }

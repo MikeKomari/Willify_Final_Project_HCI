@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="src/css/Preloader.css" />
     <link rel="stylesheet" href="src/css/MainStyles.css" />
     <link rel="stylesheet" href="src/css/Index.css" />
-    <link rel="stylesheet" href="src/css/Cart.css" />
+    <!-- <link rel="stylesheet" href="src/css/Cart.css" /> -->
     <link rel="stylesheet" href="src/css/Sidebar.css" />
+    <link rel="stylesheet" href="src/css/Carousel.css" />
+    <link rel="stylesheet" href="src/css/Footer.css" />
 
     <script defer src="src/js/Preloader.js" type="module"></script>
     <script defer src="src/js/Cart.js" type="module"></script>
     <script defer src="src/js/Index.js" type="module"></script>
+    <script defer src="src/js/Carousel.js" type="module"></script>
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -186,11 +189,13 @@
         </div>
 
         <div class="navbar__extraNav">
-          <img
-            class="navbar__navCart"
-            src="../Code/public/images/cart.png"
-            alt=""
-          />
+          <div class="navbar__navCartDiv">
+            <img
+              class="navbar__navCart"
+              src="../Code/public/images/cart.png"
+              alt=""
+            />
+          </div>
           <div class="navbar__navSeperator"></div>
           <div class="navbar__account">
             <a href="#"
@@ -219,7 +224,7 @@
             <h3 class="content__checkItOutBar__Text">Check It Out!</h3>
             <img
               class="content__checkItOutBar__Arrow"
-              src="public/images/arrow.png"
+              src="public/images/Up Arrow.png"
               alt=""
             />
           </div>
@@ -308,6 +313,223 @@
           </div>
         </div>
       </div>
+
+      <!-- carousel -->
+      <div class="carouselContainer">
+        <div class="carouselDecoration">
+          <div class="carouselDecoration__left">
+            <h3 class="carouselDecoration__text">Discover What's New</h3>
+
+            <div class="arrowCarouselDiv">
+              <a href="#" class="arrowCarouselLink">
+                <img
+                  class="carouselDecoration__arrow"
+                  src="public/images/Up Arrow.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="carouselDecoration__right">
+            <div class="prevButtonDiv">
+              <button class="carouselButton prev-button">
+                <img
+                  class="carouselButton--img"
+                  src="../Code/public/images/leftCarouselArrow.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="nextButtonDiv">
+              <button class="carouselButton next-button">
+                <img
+                  class="carouselButton--img"
+                  src="../Code/public/images/rightCarouselArrow.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carouselPageBreak"></div>
+
+        <!-- carousel itself -->
+        <div class="carousel">
+          <div class="carouselContainerForItems">
+            <a href="index.html" class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/aespa winter album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">AESPA - ARMAGEDDON</h3>
+            </a>
+            <a href="index.html" class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/taylor swift album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">TAYLOR SWIFT - LOVER</h3>
+            </a>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/jungkook album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">JUNGKOOK - SEVEN</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/nj.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NEW JEANS - OMG</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/haerin.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/niki album.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NIKI - BACKBURNER</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/laufey album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">LAUFEY - VALENTINE</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/tulus album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">TULUS - LANGIT ABU-ABU</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/iu album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">IU - Shh..</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/illit album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">ILLIT - MAGNETIC</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/the weeknd.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">THE WEEKND - DIE FOR YOU</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/ariana album.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">
+                ARIANA GRANDE - imperfect for you
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- footer -->
+    <footer class="footerContainer">
+      <div class="footerUpper">
+        <div class="footerLogo">
+          <div class="navbar__logoDiv">
+            <img
+              class="navbar__logoImage"
+              src="public/images/Logo.png"
+              alt="Willify Logo"
+            />
+            <h1 class="navbar__text">WILLIFY</h1>
+          </div>
+          <h3 class="logoDiv__desc">
+            Willify is a renowned music streaming platform that made its debut
+            in 2006. Originating as a digital audio service, Willify quickly
+            gained prominence and has become a household name in the world of
+            music.
+          </h3>
+        </div>
+        <div class="footer__content">
+          <h3 class="content--title">COMPANY</h3>
+          <a class="content--link" href="#">ABOUT US</a>
+          <a class="content--link" href="#">BLOG</a>
+          <a class="content--link" href="#">FOR THE RECORD</a>
+          <a class="content--link" href="#">JOBS</a>
+          <a class="content--link" href="#">SUPPORT</a>
+        </div>
+        <div class="footer__content">
+          <h3 class="content--title">COMMUNITIES</h3>
+          <a class="content--link" href="#">FOR ARTIST</a>
+          <a class="content--link" href="#">DEVELOPERS</a>
+          <a class="content--link" href="#">ADVERTISING</a>
+          <a class="content--link" href="#">INVESTORS</a>
+          <a class="content--link" href="#">VENDORS</a>
+          <a class="content--link" href="#">ACCOUNT</a>
+        </div>
+        <div class="footer__content">
+          <h3 class="content--title">SOCIALS</h3>
+          <a class="content--link" href="#">FACEBOOK</a>
+          <a class="content--link" href="#">X</a>
+          <a class="content--link" href="#">INSTAGRAM</a>
+        </div>
+        <div class="footerChat"></div>
+      </div>
+      <div class="footerLower">
+        <div class="footerLower__left">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../Code/public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">2024 Komari Software Inc.</h3>
+          </div>
+          <a class="footer__link" href="#">Privacy Policy</a>
+          <a class="footer__link" href="#">Terms of Use</a>
+          <a class="footer__link" href="#">Legal</a>
+          <a class="footer__link" href="#">Sidemap</a>
+          <a class="footer__link" href="#">Cookies</a>
+        </div>
+        <div class="footerLower__right">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../Code/public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">Indonesia</h3>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
