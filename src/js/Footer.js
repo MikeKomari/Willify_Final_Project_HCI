@@ -1,0 +1,72 @@
+const sliderTokped = document.getElementById("sliderLabel");
+const indonesiaText = document.querySelector(".primary");
+const englishText = document.querySelector(".secondary");
+
+let colorFlag = 1;
+
+sliderTokped.addEventListener("click", function (e) {
+  if (colorFlag) {
+    setTimeout(() => {
+      indonesiaText.style.color = "black";
+      englishText.style.color = "white";
+      colorFlag = 0;
+    }, 200);
+  } else {
+    setTimeout(() => {
+      indonesiaText.style.color = "white";
+      englishText.style.color = "black";
+      colorFlag = 1;
+    }, 200);
+  }
+});
+
+// responsive
+// const dropDownArrow = document.querySelectorAll(".content__arrow");
+// const dropDownContent = document.querySelectorAll(".content__items");
+
+let mediaScreenFlag = window.matchMedia("(max-width: 768px)");
+
+// function screenTest(e) {
+//   if (e.matches) {
+//     dropDownContent.classList.add("hidden");
+//     dropDownArrow.addEventListener("click", function (e) {
+//       dropDownContent.classList.toggle("hidden");
+//       //   dropDownContent.classList.add("footerAppear");
+//       //   dropDownContent.style.display = "flex";
+//     });
+
+//     // dropDownArrow.addEventListener("mouseover", function (e) {
+//     //   dropDownContent.classList.toggle("hidden");
+//     // });
+
+//     // dropDownArrow.addEventListener("mouseout", function (e) {
+//     //   dropDownContent.classList.toggle("hidden");
+//     // });
+//   } else {
+//   }
+// }
+
+// mediaScreenFlag.addListener(screenTest);
+
+// screenTest(mediaScreenFlag);
+
+function screenTest(e) {
+  if (e.matches) {
+    const dropDownContents = document.querySelectorAll(".content__items");
+    const dropDownArrows = document.querySelectorAll(".content__arrow");
+
+    dropDownContents.forEach((dropDownContent, index) => {
+      dropDownContent.classList.add("hidden");
+
+      dropDownArrows[index].addEventListener("click", function (e) {
+        dropDownContent.classList.toggle("hidden");
+      });
+    });
+  } else {
+    // ...
+  }
+}
+
+mediaScreenFlag.addListener(screenTest);
+
+screenTest(mediaScreenFlag);

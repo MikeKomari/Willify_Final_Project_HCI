@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Barlow", "Space Mono";
+  letter-spacing: 5%;
 }
 
 .logo {
@@ -30,7 +31,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .buttonOne {
@@ -219,3 +220,7 @@
     opacity: 0;
   }
 }
+
+/* @keyframes footerLinkDisappear{
+  
+} */

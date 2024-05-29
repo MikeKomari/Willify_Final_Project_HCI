@@ -16,6 +16,7 @@
     <script defer src="src/js/Cart.js" type="module"></script>
     <script defer src="src/js/Index.js" type="module"></script>
     <script defer src="src/js/Carousel.js" type="module"></script>
+    <script defer src="src/js/Footer.js" type="module"></script>
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -463,45 +464,98 @@
     <footer class="footerContainer">
       <div class="footerUpper">
         <div class="footerLogo">
-          <div class="navbar__logoDiv">
-            <img
-              class="navbar__logoImage"
-              src="public/images/Logo.png"
-              alt="Willify Logo"
-            />
-            <h1 class="navbar__text">WILLIFY</h1>
+          <div class="footer__LogoDesc">
+            <div class="navbar__logoDiv">
+              <img
+                class="navbar__logoImage"
+                src="public/images/Logo.png"
+                alt="Willify Logo"
+              />
+              <h1 class="navbar__text">WILLIFY</h1>
+            </div>
+            <h3 class="logoDiv__desc">
+              Willify is a renowned music streaming platform that made its debut
+              in 2006. Originating as a digital audio service, Willify quickly
+              gained prominence and has become a household name in the world of
+              music.
+            </h3>
           </div>
-          <h3 class="logoDiv__desc">
-            Willify is a renowned music streaming platform that made its debut
-            in 2006. Originating as a digital audio service, Willify quickly
-            gained prominence and has become a household name in the world of
-            music.
-          </h3>
+          <div class="footer__slider">
+            <label for="sliderLabel" class="footer__slider--label">
+              <input type="checkbox" checked name="" id="sliderLabel" />
+              <div class="footer__slider--slider">
+                <h4 class="primary">Indonesia</h4>
+                <h4 class="secondary">English</h4>
+              </div>
+            </label>
+          </div>
         </div>
         <div class="footer__content">
-          <h3 class="content--title">COMPANY</h3>
-          <a class="content--link" href="#">ABOUT US</a>
-          <a class="content--link" href="#">BLOG</a>
-          <a class="content--link" href="#">FOR THE RECORD</a>
-          <a class="content--link" href="#">JOBS</a>
-          <a class="content--link" href="#">SUPPORT</a>
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMPANY</h3>
+            <img
+              class="content__arrow"
+              src="public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">ABOUT US</a>
+            <a class="content__link" href="#">BLOG</a>
+            <a class="content__link" href="#">FOR THE RECORD</a>
+            <a class="content__link" href="#">JOBS</a>
+            <a class="content__link" href="#">SUPPORT</a>
+          </div>
         </div>
         <div class="footer__content">
-          <h3 class="content--title">COMMUNITIES</h3>
-          <a class="content--link" href="#">FOR ARTIST</a>
-          <a class="content--link" href="#">DEVELOPERS</a>
-          <a class="content--link" href="#">ADVERTISING</a>
-          <a class="content--link" href="#">INVESTORS</a>
-          <a class="content--link" href="#">VENDORS</a>
-          <a class="content--link" href="#">ACCOUNT</a>
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMMUNITIES</h3>
+            <img
+              class="content__arrow"
+              src="public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FOR ARTIST</a>
+            <a class="content__link" href="#">DEVELOPERS</a>
+            <a class="content__link" href="#">ADVERTISING</a>
+            <a class="content__link" href="#">INVESTORS</a>
+            <a class="content__link" href="#">VENDORS</a>
+            <a class="content__link" href="#">ACCOUNT</a>
+          </div>
         </div>
         <div class="footer__content">
-          <h3 class="content--title">SOCIALS</h3>
-          <a class="content--link" href="#">FACEBOOK</a>
-          <a class="content--link" href="#">X</a>
-          <a class="content--link" href="#">INSTAGRAM</a>
+          <div class="content__titleNavigation">
+            <h3 class="content__title">Socials</h3>
+            <img
+              class="content__arrow"
+              src="public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FACEBOOK</a>
+            <a class="content__link" href="#">X</a>
+            <a class="content__link" href="#">INSTAGRAM</a>
+          </div>
         </div>
-        <div class="footerChat"></div>
+        <div class="footerChat">
+          <img
+            class="footerChat__image"
+            src="public/images/Illustration - dancing.png"
+            alt=""
+          />
+          <div class="footerInput">
+            <h4 class="footerInput__text">Having trouble? Chat us!</h4>
+            <input
+              type="text"
+              name="chatInput"
+              id="chatInput"
+              placeholder="Type here!"
+            />
+          </div>
+        </div>
       </div>
       <div class="footerLower">
         <div class="footerLower__left">

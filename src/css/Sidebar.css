@@ -12,7 +12,7 @@
 
   z-index: 999;
   /* animation: curtainSidebar 5s ease forwards; */
-  animation: curtainSidebar 2s ease forwards;
+  animation: curtainSidebar 0.4s ease forwards;
 }
 
 .sidebar__content {
@@ -105,6 +105,6 @@
 
 .sidebar-wrapper.hiddenWithAnimation {
   /* display: none; */
-  animation: revealContentClosing 1.5s ease forwards,
+  animation: revealContentClosing 0.8s ease forwards,
     curtainSidebarClosing 2s ease forwards;
 }
