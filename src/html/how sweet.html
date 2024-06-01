@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../public/images/Logo.png" />
+    <link rel="stylesheet" href="../css/MainStyles.css" />
+    <link rel="stylesheet" href="../css/Index.css" />
+    <link rel="stylesheet" href="../css/Cart.css" />
+    <link rel="stylesheet" href="../css/Sidebar.css" />
+    <link rel="stylesheet" href="../css/Carousel.css" />
+    <link rel="stylesheet" href="../css/Footer.css" />
+    <link rel="stylesheet" href="../css/SongDetail.css" />
+
+    <script defer src="../js/Cart.js" type="module"></script>
+    <script defer src="../js/Index.js" type="module"></script>
+    <script defer src="../js/Footer.js" type="module"></script>
+    <script defer src="../js/SongDetail.js" type="module"></script>
+    <title>Willify - Willify(ID)</title>
+  </head>
+  <body>
+    <div class="wrapper wrapperEverything">
+      <div class="pop-up-wrapper hidden">
+        <div class="pop-up">
+          <h3 class="cart_text">Cart</h3>
+          <div class="linebreak2"></div>
+
+          <!-- if pop up is empty -->
+          <div class="pop-up_content_empty">
+            <h4 class="empty_text">Your cart is empty.</h4>
+          </div>
+          <!-- if pop up has items in it
+            show this instead of the above div -->
+          <!-- BEFOREBEGIN -->
+          <div class="cart__container items">
+            <!-- AFTERBEGIN -->
+            <button class="checkout hidden">Checkout</button>
+            <!-- BEFOREEND -->
+          </div>
+          <!-- AFTEREND -->
+        </div>
+      </div>
+
+      <div class="sidebar-wrapper hidden hiddenWithAnimation">
+        <div class="sidebar__content">
+          <div class="sidebar__profile">
+            <img
+              class="userImage"
+              src="../../public/images/User.png"
+              alt="User"
+            />
+            <div class="sidebar__username">
+              <h2 class="username__name">MICHAEL KIMEISON</h2>
+              <h2 class="username__username">@Komari54</h2>
+            </div>
+          </div>
+
+          <div class="pageBreak"></div>
+
+          <div class="featureContainer">
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/User.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Account</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/friends.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Friends</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/uta.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Songs</h3>
+            </div>
+          </div>
+
+          <!-- account  -->
+          <div class="navbar__account sideBarMode">
+            <a href="#"
+              ><button class="buttonOne buttonSideBar navbar__buttonLogin">
+                Log In
+              </button></a
+            >
+            <a href="../Code/src/html/Register.html"
+              ><button class="buttonOne buttonSideBar navbar__buttonRegister">
+                Register
+              </button></a
+            >
+          </div>
+
+          <!-- features -->
+          <div class="navbar__nav sideBarMode">
+            <a href="index.html"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Home</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Collection</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink discoverSOTD">
+                <h3 class="navbar__navText">Discover</h3>
+                <div class="navbar__navDecor brighten"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">About</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html"
+          ><div class="navbar__logoDiv">
+            <img
+              class="navbar__logoImage indexPage"
+              src="../../public/images/Logo.png"
+              alt="Willify Logo"
+            />
+            <h1 class="navbar__text">WILLIFY</h1>
+          </div></a
+        >
+
+        <div class="navbar__nav">
+          <a href="index.html"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Home</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Collection</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink discoverSOTD">
+              <h3 class="navbar__navText">Discover</h3>
+              <div class="navbar__navDecor brighten"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">About</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+        </div>
+
+        <div class="navbar__extraNav">
+          <div class="navbar__navCartDiv">
+            <img
+              class="navbar__navCart"
+              src="../../public/images/cart.png"
+              alt=""
+            />
+            <p class="cartItemHome hidden">1</p>
+          </div>
+          <div class="navbar__navSeperator"></div>
+          <div class="navbar__account">
+            <a href="#"
+              ><button class="buttonOne navbar__buttonLogin">Log In</button></a
+            >
+            <a href="../Code/src/html/Register.html"
+              ><button class="buttonOne navbar__buttonRegister">
+                Register
+              </button></a
+            >
+            <img class="userPNG hidden" src="public/images/User.png" alt="" />
+          </div>
+          <div class="navbar__hamburgerMenu">
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pageBreak"></div>
+
+      <!-- song detail -->
+      <div class="songAuthorDetail">
+        <img
+          class="songAuthorDetail__img"
+          src="../../public/images/haerin.jpeg"
+          alt=""
+        />
+        <div class="songAuthorDetail__text">
+          <div class="songAuthorDetail__textUpper">
+            <div class="textUpper__main">
+              <div class="titleDiv">
+                <h2 class="textUpper__title">How Sweet</h2>
+              </div>
+              <div class="textUpper__rating">
+                <img
+                  class="up__arrow"
+                  src="../../public/images/rating up.png"
+                  alt=""
+                />
+                <a class="songText rating__text" href="#">3</a>
+              </div>
+            </div>
+            <div class="authorDiv">
+              <p class="songText detail__text">
+                <a class="songAuthor" href="#">New Jeans </a>- 1st track of
+                <a href="">how sweet</a>
+              </p>
+              <h5 class="songText text__producers">Producers</h5>
+              <p class="songText detail__text">
+                <a href="#">HYBE</a>, <a href="#">MIN HEE JIN</a>
+              </p>
+            </div>
+          </div>
+          <div class="songAuthorDetail__textLower">
+            <div class="textLower__item">
+              <img
+                class="textLower__item--icon"
+                src="../../public/images/date.png"
+                alt=""
+              />
+              <p class="songText detail__text">24th May 2024</p>
+            </div>
+            <div class="textLower__item">
+              <img
+                class="textLower__item--icon"
+                src="../../public/images/views.png"
+                alt=""
+              />
+              <p class="songText detail__text">4M+ Views</p>
+            </div>
+            <div class="textLower__item">
+              <img
+                class="textLower__item--icon"
+                src="../../public/images/duration.png"
+                alt=""
+              />
+              <p class="songText detail__text">3:30</p>
+            </div>
+            <div class="textLower__item">
+              <img
+                class="textLower__item--icon"
+                src="../../public/images/Share.png"
+                alt=""
+              />
+              <p class="songText detail__text">
+                <a class="detail__text" href="#">share</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- lyrics  -->
+      <div class="songContainer">
+        <div class="songReccomendations">
+          <div class="songFromAlbum">
+            <h1 class="otherSongTitle">Other song from the album</h1>
+            <div class="otherSong__album">
+              <a href="#">
+                <div class="album__item">
+                  <img
+                    class="album__image"
+                    src="../../public/images/ariana album.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">
+                    intro(end of world)
+                  </h4>
+                </div>
+              </a>
+              <a href="#">
+                <div class="album__item">
+                  <img
+                    class="album__image"
+                    src="../../public/images/ariana album.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">yes, and?</h4>
+                </div> </a
+              ><a href="#">
+                <div class="album__item">
+                  <img
+                    class="album__image"
+                    src="../../public/images/ariana album.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">
+                    the boy is mine
+                  </h4>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="songReccomendations__otherSong">
+            <h1 class="otherSongTitle">You might like</h1>
+            <div class="otherSong__foreign">
+              <a href="#">
+                <div class="foreign__item">
+                  <img
+                    class="foreign__image"
+                    src="../../public/images/ariana album.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">yes, and?</h4>
+                </div> </a
+              ><a href="#">
+                <div class="foreign__item">
+                  <img
+                    class="foreign__image"
+                    src="../../public/images/haerin.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">How Sweet</h4>
+                </div> </a
+              ><a href="#">
+                <div class="foreign__item">
+                  <img
+                    class="foreign__image"
+                    src="../../public/images/ariana album.jpeg"
+                    alt=""
+                  />
+                  <h4 class="songText albumSong__otherTitle">yes, and?</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="add__to__cart">add to cart</button>
+        </div>
+        <div class="songLyrics">
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Verse 1-</h3>
+
+            <!-- we can use <br> on each line break but it wont be effective
+            when we want to create new song detail page
+            let's say we take the lyrics from a database, we can just 
+            scan for every enter, then create a new paragraph instead of 
+            cramming everything into a paragraph -->
+
+            <p class="detail__lyrics">
+              All I know is now alge dwaesseo na (I know)
+            </p>
+            <p class="detail__lyrics">
+              Geudongan maennal always up and down (No more)
+            </p>
+            <p class="detail__lyrics">
+              Saenggak tto saenggak spinnin' 'round and 'round
+            </p>
+            <p class="detail__lyrics">Changing my mind</p>
+            <p class="detail__lyrics">
+              Susanghaeseo geureochi ireon heotsori (No more)
+            </p>
+            <p class="detail__lyrics">
+              How it's supposed to be geumanhae 'cause it's clear
+            </p>
+            <p class="detail__lyrics">
+              (It's simple) It's like biting an apple
+            </p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Refrain-</h3>
+            <p class="detail__lyrics">Toxic lover, you're no better</p>
+            <p class="detail__lyrics">Geogi sumji malgo eolleun nawa</p>
+            <p class="detail__lyrics">You little demon in my storyline</p>
+            <p class="detail__lyrics">
+              Don't knock on my door, I'll see you out
+            </p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Chorus-</h3>
+            <p class="detail__lyrics">F***** up</p>
+            <p class="detail__lyrics">Anxious</p>
+            <p class="detail__lyrics">Too much</p>
+            <p class="detail__lyrics">But I'll love you like you need me to</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Verse 2-</h3>
+            <p class="detail__lyrics">Messy</p>
+            <p class="detail__lyrics">Completely</p>
+            <p class="detail__lyrics">Distressed</p>
+            <p class="detail__lyrics">But I'm not like that since I met you</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Pre Chorus-</h3>
+            <p class="detail__lyrics">Let's go tonight</p>
+            <p class="detail__lyrics">
+              'Cause there's just a few seconds left till tomorrow
+            </p>
+            <p class="detail__lyrics">We have</p>
+            <p class="detail__lyrics">All that we need</p>
+            <p class="detail__lyrics">
+              Let's leave our baggage and wine at the table
+            </p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Chorus-</h3>
+            <p class="detail__lyrics">Mmm, how could we know</p>
+            <p class="detail__lyrics">
+              That this was a happy disaster, mmm? (happy disaster)
+            </p>
+            <p class="detail__lyrics">
+              I'm glad we crashed and burned (we crashed and burned)
+            </p>
+            <p class="detail__lyrics">I'll never forget when you told me</p>
+            <p class="detail__lyrics">You said, "usually I'm</p>
+            <p class="detail__lyrics"></p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Bridge-</h3>
+            <p class="detail__lyrics">"F***** up</p>
+            <p class="detail__lyrics">Anxious</p>
+            <p class="detail__lyrics">Too much</p>
+            <p class="detail__lyrics">But I'll love you like you need me to</p>
+            <p class="detail__lyrics">Imperfect for you"</p>
+            <p class="detail__lyrics"></p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Chorus-</h3>
+            <p class="detail__lyrics">Messy</p>
+            <p class="detail__lyrics">Completely</p>
+            <p class="detail__lyrics">Distressed</p>
+            <p class="detail__lyrics">But I'm not like that since I met you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Bridge-</h3>
+            <p class="detail__lyrics">Mmm, how could we know</p>
+            <p class="detail__lyrics">
+              We'd make the bad stuff delightful, mmm?
+            </p>
+            <p class="detail__lyrics">I'm glad we crashed and burned</p>
+            <p class="detail__lyrics">I know we'll be there for each other</p>
+            <p class="detail__lyrics">When we're feeling</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Pre Chorus-</h3>
+            <p class="detail__lyrics">F***** up</p>
+            <p class="detail__lyrics">Anxious</p>
+            <p class="detail__lyrics">Too much</p>
+            <p class="detail__lyrics">But I'll love you like you need me to</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Pre Chorus-</h3>
+            <p class="detail__lyrics">Messy</p>
+            <p class="detail__lyrics">Completely</p>
+            <p class="detail__lyrics">Distressed</p>
+            <p class="detail__lyrics">But I'm not like that since I met you</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Chorus-</h3>
+            <p class="detail__lyrics">F***** up</p>
+            <p class="detail__lyrics">Anxious</p>
+            <p class="detail__lyrics">Too much</p>
+            <p class="detail__lyrics">Like you need me to</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+          <div class="songLyrics__detail">
+            <h3 class="detail__part">-Outro-</h3>
+            <p class="detail__lyrics">Messy</p>
+            <p class="detail__lyrics">Completely</p>
+            <p class="detail__lyrics">Distressed</p>
+            <p class="detail__lyrics">Not like that since I met you</p>
+            <p class="detail__lyrics">Imperfect for you</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- mp3 all same -->
+      <div class="songMV-DIV">
+        <div class="songMV">
+          <h3 class="songText">MP3</h3>
+          <audio controls>
+            <source
+              class="songMP3__audio"
+              src="../../public/audio/Ariana Grande - imperfect for you (lyric visualizer).mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+      <div class="songMV-DIV">
+        <div class="songMV">
+          <h3 class="songText">MV</h3>
+          <iframe
+            class="songMV__video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/VtQorLzzbQw"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footerContainer">
+      <div class="footerUpper">
+        <div class="footerLogo">
+          <div class="footer__LogoDesc">
+            <div class="navbar__logoDiv">
+              <img
+                class="navbar__logoImage"
+                src="../../public/images/Logo.png"
+                alt="Willify Logo"
+              />
+              <h1 class="navbar__text">WILLIFY</h1>
+            </div>
+            <h3 class="logoDiv__desc">
+              Willify is a renowned music streaming platform that made its debut
+              in 2006. Originating as a digital audio service, Willify quickly
+              gained prominence and has become a household name in the world of
+              music.
+            </h3>
+          </div>
+          <div class="footer__slider">
+            <label for="sliderLabel" class="footer__slider--label">
+              <input type="checkbox" checked name="" id="sliderLabel" />
+              <div class="footer__slider--slider">
+                <h4 class="primary">Indonesia</h4>
+                <h4 class="secondary">English</h4>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMPANY</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">ABOUT US</a>
+            <a class="content__link" href="#">BLOG</a>
+            <a class="content__link" href="#">FOR THE RECORD</a>
+            <a class="content__link" href="#">JOBS</a>
+            <a class="content__link" href="#">SUPPORT</a>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMMUNITIES</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FOR ARTIST</a>
+            <a class="content__link" href="#">DEVELOPERS</a>
+            <a class="content__link" href="#">ADVERTISING</a>
+            <a class="content__link" href="#">INVESTORS</a>
+            <a class="content__link" href="#">VENDORS</a>
+            <a class="content__link" href="#">ACCOUNT</a>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">Socials</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FACEBOOK</a>
+            <a class="content__link" href="#">X</a>
+            <a class="content__link" href="#">INSTAGRAM</a>
+          </div>
+        </div>
+        <div class="footerChat">
+          <img
+            class="footerChat__image"
+            src="../../public/images/Illustration - dancing.png"
+            alt=""
+          />
+          <div class="footerInput">
+            <h4 class="footerInput__text">Having trouble? Chat us!</h4>
+            <input
+              type="text"
+              name="chatInput"
+              id="chatInput"
+              placeholder="Type here!"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footerLower">
+        <div class="footerLower__left">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../../public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">2024 Komari Software Inc.</h3>
+          </div>
+          <a class="footer__link" href="#">Privacy Policy</a>
+          <a class="footer__link" href="#">Terms of Use</a>
+          <a class="footer__link" href="#">Legal</a>
+          <a class="footer__link" href="#">Sidemap</a>
+          <a class="footer__link" href="#">Cookies</a>
+        </div>
+        <div class="footerLower__right">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../../public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">Indonesia</h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

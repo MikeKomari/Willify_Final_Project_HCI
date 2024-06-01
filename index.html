@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="src/css/Preloader.css" />
     <link rel="stylesheet" href="src/css/MainStyles.css" />
     <link rel="stylesheet" href="src/css/Index.css" />
-    <!-- <link rel="stylesheet" href="src/css/Cart.css" /> -->
+    <link rel="stylesheet" href="src/css/Cart.css" />
     <link rel="stylesheet" href="src/css/Sidebar.css" />
     <link rel="stylesheet" href="src/css/Carousel.css" />
     <link rel="stylesheet" href="src/css/Footer.css" />
+    <link rel="stylesheet" href="src/css/FAQ.css" />
 
     <script defer src="src/js/Preloader.js" type="module"></script>
+    <script defer src="src/js/Accounts.js" type="module"></script>
     <script defer src="src/js/Cart.js" type="module"></script>
     <script defer src="src/js/Index.js" type="module"></script>
     <script defer src="src/js/Carousel.js" type="module"></script>
     <script defer src="src/js/Footer.js" type="module"></script>
+    <script defer src="src/js/RandomiseSOTD.js" type="module"></script>
+    <script defer src="src/js/FAQIndex.js" type="module"></script>
+
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -135,17 +140,17 @@
                 <h3 class="navbar__navText">Home</h3>
                 <div class="navbar__navDecor"></div></div
             ></a>
-            <a href="#"
+            <a href="src/html/Songs.html"
               ><div class="navbar__navLink">
                 <h3 class="navbar__navText">Collection</h3>
                 <div class="navbar__navDecor"></div></div
             ></a>
             <a href="#"
-              ><div class="navbar__navLink">
+              ><div class="navbar__navLink discoverSOTD">
                 <h3 class="navbar__navText">Discover</h3>
                 <div class="navbar__navDecor"></div></div
             ></a>
-            <a href="#"
+            <a href="src/html/About Us.html"
               ><div class="navbar__navLink">
                 <h3 class="navbar__navText">About</h3>
                 <div class="navbar__navDecor"></div></div
@@ -178,7 +183,7 @@
               <div class="navbar__navDecor"></div></div
           ></a>
           <a href="#"
-            ><div class="navbar__navLink">
+            ><div class="navbar__navLink discoverSOTD">
               <h3 class="navbar__navText">Discover</h3>
               <div class="navbar__navDecor"></div></div
           ></a>
@@ -196,6 +201,7 @@
               src="../Code/public/images/cart.png"
               alt=""
             />
+            <p class="cartItem hidden">1</p>
           </div>
           <div class="navbar__navSeperator"></div>
           <div class="navbar__account">
@@ -207,6 +213,7 @@
                 Register
               </button></a
             >
+            <img class="userPNG hidden" src="public/images/User.png" alt="" />
           </div>
           <div class="navbar__hamburgerMenu">
             <div class="hamburgerMenu__bar"></div>
@@ -221,6 +228,11 @@
       <!-- main content -->
       <div class="container">
         <div class="item content__bestSale">
+          <div class="bestSaleDesc">
+            <h1 class="bestSale__best">BEST</h1>
+            <h1 class="bestSale__sales">SALES</h1>
+            <h1 class="bestSale__date">APRIL 2024</h1>
+          </div>
           <div class="content__checkItOutBar">
             <h3 class="content__checkItOutBar__Text">Check It Out!</h3>
             <img
@@ -230,17 +242,33 @@
             />
           </div>
         </div>
-        <div class="item content__quote"></div>
+        <div class="item content__quote">
+          <div class="quote__div">
+            <h2 class="quote__poem">TUNE IN A WORLD OF RYTHM AND MELODY</h2>
+          </div>
+          <div class="quote__search">
+            <h2 class="search__text">START YOUR JOURNEY HERE</h2>
+            <a href="src/html/Songs.html">
+              <div class="searchImageDiv">
+                <img
+                  class="searchImage"
+                  src="public/images/Search.png"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+        </div>
         <div class="item content__newSurprise">
-          <a class="linkArrow newSurprise" href="#">
-            <div class="linkArrowNewSurprise">
-              <img
-                class="linkArrowImage"
-                src="public/images/Upper right Arrow.png"
-                alt=""
-              />
-            </div>
-          </a>
+          <!-- <a class=" newSurprise" href="#"> -->
+          <div class="linkArrow newSurprise linkArrowNewSurprise discoverSOTD">
+            <img
+              class="linkArrowImage"
+              src="public/images/Upper right Arrow.png"
+              alt=""
+            />
+          </div>
+          <!-- </a> -->
           <div class="newSurprise__Container">
             <h2 class="newSurprise__titleText">NEW SURPRISE!</h2>
             <div class="pageBreak pageBreak__quotes"></div>
@@ -275,46 +303,114 @@
         </div>
       </div>
 
-      <!-- faq -->
-      <!-- bestSeller -->
-      <div class="bestSellerContainer">
-        <div class="bestSellerItem songOne">
-          <h2 class="rankingLabel">4th</h2>
-          <div class="songName">
-            <h3 class="songName__Text">Love Wins All - IU</h3>
-            <div class="pageBreakSong"></div>
+      <div class="faqBestSellerContainer">
+        <!-- faq -->
+        <div class="faqContainer">
+          <div class="faq__title">
+            <h3 class="textTitle faq__title--text">
+              Frequently Asked Questions
+            </h3>
+            <h5 class="textDescription faq__title--desc">
+              Welcome to our FAQ page! Here you'll find answers to some of the
+              most frequently asked questions about our music products,
+              services, and policies. If you can't find the information you're
+              looking for, please feel free to contact our customer support
+              team.
+            </h5>
+          </div>
+          <div class="faq__content">
+            <div class="faq__content--itemDiv">
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    How do I create an account?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  To create an account, simply click on the "Register" button on
+                  the top right corner of the page. You will be asked to provide
+                  some basic information such as your name, email address, and
+                  password. Once you've completed the registration process,
+                  you'll be able to log in and start enjoying all the features
+                  of our music platform.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    How do I create an account?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  To create an account, simply click on the "Register" button on
+                  the top right corner of the page. You will be asked to provide
+                  some basic information such as your name, email address, and
+                  password. Once you've completed the registration process,
+                  you'll be able to log in and start enjoying all the features
+                  of our music platform.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+            </div>
+            <div class="faq__content--image">
+              <img
+                class="faq__content--image__img"
+                src="public/images/FAQ illust.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-        <div class="bestSellerItem songTwo">
-          <h2 class="rankingLabel">2nd</h2>
-          <div class="songName">
-            <h3 class="songName__Text">NewJeans - OMG</h3>
-            <div class="pageBreakSong"></div>
+        <!-- bestSeller -->
+        <div class="bestSellerContainer">
+          <div class="bestSellerItem songOne">
+            <h2 class="rankingLabel">4th</h2>
+            <div class="songName">
+              <h3 class="songName__Text">Love Wins All - IU</h3>
+              <div class="pageBreakSong"></div>
+            </div>
           </div>
-        </div>
-        <div class="bestSellerItem songThree">
-          <h2 class="rankingLabel">1st</h2>
-          <div class="songName">
-            <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
-            <div class="pageBreakSong"></div>
+          <div class="bestSellerItem songTwo">
+            <h2 class="rankingLabel">2nd</h2>
+            <div class="songName">
+              <h3 class="songName__Text">NewJeans - OMG</h3>
+              <div class="pageBreakSong"></div>
+            </div>
           </div>
-        </div>
-        <div class="bestSellerItem songFour">
-          <h2 class="rankingLabel">3rd</h2>
-          <div class="songName">
-            <h3 class="songName__Text">yes, and? - Ariana Grande</h3>
-            <div class="pageBreakSong"></div>
+          <div class="bestSellerItem songThree">
+            <h2 class="rankingLabel">1st</h2>
+            <div class="songName">
+              <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
+              <div class="pageBreakSong"></div>
+            </div>
           </div>
-        </div>
-        <div class="bestSellerItem songFive">
-          <h2 class="rankingLabel">5th</h2>
-          <div class="songName">
-            <h3 class="songName__Text">NIKI - Anaheim</h3>
-            <div class="pageBreakSong"></div>
+          <div class="bestSellerItem songFour">
+            <h2 class="rankingLabel">3rd</h2>
+            <div class="songName">
+              <h3 class="songName__Text">yes, and? - Ariana Grande</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+          <div class="bestSellerItem songFive">
+            <h2 class="rankingLabel">5th</h2>
+            <div class="songName">
+              <h3 class="songName__Text">NIKI - Anaheim</h3>
+              <div class="pageBreakSong"></div>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- carousel -->
       <div class="carouselContainer">
         <div class="carouselDecoration">
@@ -325,7 +421,7 @@
               <a href="#" class="arrowCarouselLink">
                 <img
                   class="carouselDecoration__arrow"
-                  src="public/images/Up Arrow.png"
+                  src="../Code/public/images/Up Arrow.png"
                   alt=""
                 />
               </a>

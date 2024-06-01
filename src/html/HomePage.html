@@ -3,16 +3,630 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="htps://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/public/images/Logo.png" />
-    <link rel="stylesheet" href="/src/css/Register.css" />
-    <link rel="stylesheet" href="/src/css/MainStyles.css" />
-    <title>Willify</title>
+    <link rel="icon" href="../../public/images/Logo.png" />
+    <link rel="stylesheet" href="../css/MainStyles.css" />
+    <link rel="stylesheet" href="../css/Index.css" />
+    <!-- <link rel="stylesheet" href="src/css/Cart.css" /> -->
+    <link rel="stylesheet" href="../css/Sidebar.css" />
+    <link rel="stylesheet" href="../css/Carousel.css" />
+    <link rel="stylesheet" href="../css/Footer.css" />
+    <link rel="stylesheet" href="../css/SongDetail.css" />
+    <link rel="stylesheet" href="../css/FAQ.css" />
+
+    <!-- <script defer src="../js/Cart.js" type="module"></script> -->
+    <script defer src="../js/Accounts.js" type="module"></script>
+    <script defer src="../js/Index.js" type="module"></script>
+    <script defer src="../js/Footer.js" type="module"></script>
+    <script defer src="../js/Carousel.js" type="module"></script>
+    <script defer src="../js/SongDetail.js" type="module"></script>
+    <script defer src="../js/RandomiseSOTD.js" type="module"></script>
+    <script defer src="../js/FAQ.js" type="module"></script>
+    <title>Willify - Willify(ID)</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper wrapperEverything">
+      <div class="pop-up-wrapper hidden">
+        <div class="pop-up">
+          <h3 class="cart_text">Cart</h3>
+          <div class="linebreak2"></div>
+
+          <!-- if pop up is empty -->
+          <div class="pop-up_content_empty">
+            <h4 class="empty_text">Your cart is empty.</h4>
+          </div>
+          <!-- if pop up has items in it
+            show this instead of the above div -->
+          <!-- BEFOREBEGIN -->
+          <div class="cart__container items">
+            <!-- AFTERBEGIN -->
+            <button class="checkout hidden">Checkout</button>
+            <!-- BEFOREEND -->
+          </div>
+          <!-- AFTEREND -->
+        </div>
+      </div>
+      <div class="sidebar-wrapper hidden hiddenWithAnimation">
+        <div class="sidebar__content">
+          <div class="sidebar__profile">
+            <img
+              class="userImage"
+              src="../../public/images/User.png"
+              alt="User"
+            />
+            <div class="sidebar__username">
+              <h2 class="username__name">MICHAEL KIMEISON</h2>
+              <h2 class="username__username">@Komari54</h2>
+            </div>
+          </div>
+
+          <div class="pageBreak"></div>
+
+          <div class="featureContainer">
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/User.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Account</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/friends.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Friends</h3>
+            </div>
+            <div class="featureItems">
+              <img
+                class="featureItems__img"
+                src="../../public/images/uta.png"
+                alt=""
+              />
+              <h3 class="featureItems__text">Songs</h3>
+            </div>
+          </div>
+
+          <!-- account  -->
+          <div class="navbar__account sideBarMode">
+            <a href="Login.html"
+              ><button class="buttonOne buttonSideBar navbar__buttonLogin">
+                Log In
+              </button></a
+            >
+            <a href="Register.html"
+              ><button class="buttonOne buttonSideBar navbar__buttonRegister">
+                Register
+              </button></a
+            >
+          </div>
+
+          <!-- features -->
+          <div class="navbar__nav sideBarMode">
+            <a href="HomePage.html"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Home</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="Songs.html"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">Collection</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText discoverSOTD">Discover</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="About Us.html"
+              ><div class="navbar__navLink">
+                <h3 class="navbar__navText">About</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html"
+          ><div class="navbar__logoDiv">
+            <img
+              class="navbar__logoImage indexPage"
+              src="../../public/images/Logo.png"
+              alt="Willify Logo"
+            />
+            <h1 class="navbar__text">WILLIFY</h1>
+          </div></a
+        >
+
+        <div class="navbar__nav">
+          <a href="HomePage.html"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Home</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="Songs.html"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">Collection</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink discoverSOTD">
+              <h3 class="navbar__navText">Discover</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+          <a href="#"
+            ><div class="navbar__navLink">
+              <h3 class="navbar__navText">About</h3>
+              <div class="navbar__navDecor"></div></div
+          ></a>
+        </div>
+
+        <div class="navbar__extraNav">
+          <div class="navbar__navCartDiv">
+            <img
+              class="navbar__navCart"
+              src="../../public/images/cart.png"
+              alt=""
+            />
+          </div>
+          <div class="navbar__navSeperator"></div>
+          <div class="navbar__account">
+            <a href="Login.html"
+              ><button class="buttonOne navbar__buttonLogin">Log In</button></a
+            >
+            <a href="Register.html"
+              ><button class="buttonOne navbar__buttonRegister">
+                Register
+              </button></a
+            >
+
+            <img class="userPNG hidden" src="public/images/User.png" alt="" />
+          </div>
+          <div class="navbar__hamburgerMenu">
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
+            <div class="hamburgerMenu__bar"></div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pageBreak"></div>
+
+      <!-- main content -->
+      <div class="container">
+        <div class="item content__bestSale">
+          <div class="content__checkItOutBar">
+            <h3 class="content__checkItOutBar__Text">Check It Out!</h3>
+            <img
+              class="content__checkItOutBar__Arrow"
+              src="../../public/images/Up Arrow.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item content__quote"></div>
+        <div class="item content__newSurprise">
+          <!-- <a class="linkArrow newSurprise" href="#"> -->
+          <div class="linkArrow newSurprise linkArrowNewSurprise discoverSOTD">
+            <img
+              class="linkArrowImage"
+              src="public/images/Upper right Arrow.png"
+              alt=""
+            />
+          </div>
+          <!-- </a> -->
+          <div class="newSurprise__Container">
+            <h2 class="newSurprise__titleText">NEW SURPRISE!</h2>
+            <div class="pageBreak pageBreak__quotes"></div>
+            <div class="newSurprise__everyDayText">
+              <h3 class="newSurprise__everyDayText--Text">EVERY DAY</h3>
+              <img src="../Code/public/images/Arrow 3.png" alt="" />
+            </div>
+            <div class="newSurprise__heroText">
+              <h1 class="heroText__title">SONGS</h1>
+              <h3 class="heroText__desc">JUST FOR YOU</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item content__trending">
+          <a class="linkArrow trending" href="#">
+            <div class="linkArrowtrending">
+              <img
+                class="linkArrowImage"
+                src="public/images/Upper right Arrow.png"
+                alt=""
+              />
+            </div>
+          </a>
+          <div class="trending__text">
+            <h3 class="trending__quotes">
+              We are dedicated to expanding and spreading the love for music to
+              everyone.
+            </h3>
+            <div class="pageBreak pageBreak__quotes"></div>
+            <h3 class="trending__tag">#TRENDING2024</h3>
+          </div>
+        </div>
+      </div>
+      <div class="faqBestSellerContainer">
+        <!-- faq -->
+        <div class="faqContainer">
+          <div class="faq__title">
+            <h3 class="textTitle faq__title--text">
+              Frequently Asked Questions
+            </h3>
+            <h5 class="textDescription faq__title--desc">
+              Welcome to our FAQ page! Here you'll find answers to some of the
+              most frequently asked questions about our music products,
+              services, and policies. If you can't find the information you're
+              looking for, please feel free to contact our customer support
+              team.
+            </h5>
+          </div>
+          <div class="faq__content">
+            <div class="faq__content--itemDiv">
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    How do I create an account?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  To create an account, simply click on the "Register" button on
+                  the top right corner of the page. You will be asked to provide
+                  some basic information such as your name, email address, and
+                  password. Once you've completed the registration process,
+                  you'll be able to log in and start enjoying all the features
+                  of our music platform.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    How do I create an account?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  To create an account, simply click on the "Register" button on
+                  the top right corner of the page. You will be asked to provide
+                  some basic information such as your name, email address, and
+                  password. Once you've completed the registration process,
+                  you'll be able to log in and start enjoying all the features
+                  of our music platform.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+            </div>
+            <div class="faq__content--image">
+              <img
+                class="faq__content--image__img"
+                src="public/images/FAQ illust.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- bestSeller -->
+        <div class="bestSellerContainer">
+          <div class="bestSellerItem songOne">
+            <h2 class="rankingLabel">4th</h2>
+            <div class="songName">
+              <h3 class="songName__Text">Love Wins All - IU</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+          <div class="bestSellerItem songTwo">
+            <h2 class="rankingLabel">2nd</h2>
+            <div class="songName">
+              <h3 class="songName__Text">NewJeans - OMG</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+          <div class="bestSellerItem songThree">
+            <h2 class="rankingLabel">1st</h2>
+            <div class="songName">
+              <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+          <div class="bestSellerItem songFour">
+            <h2 class="rankingLabel">3rd</h2>
+            <div class="songName">
+              <h3 class="songName__Text">yes, and? - Ariana Grande</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+          <div class="bestSellerItem songFive">
+            <h2 class="rankingLabel">5th</h2>
+            <div class="songName">
+              <h3 class="songName__Text">NIKI - Anaheim</h3>
+              <div class="pageBreakSong"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- carousel -->
+      <div class="carouselContainer">
+        <div class="carouselDecoration">
+          <div class="carouselDecoration__left">
+            <h3 class="carouselDecoration__text">Discover What's New</h3>
+
+            <div class="arrowCarouselDiv">
+              <a href="#" class="arrowCarouselLink">
+                <img
+                  class="carouselDecoration__arrow"
+                  src="public/images/Up Arrow.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="carouselDecoration__right">
+            <div class="prevButtonDiv">
+              <button class="carouselButton prev-button">
+                <img
+                  class="carouselButton--img"
+                  src="../Code/public/images/leftCarouselArrow.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="nextButtonDiv">
+              <button class="carouselButton next-button">
+                <img
+                  class="carouselButton--img"
+                  src="../Code/public/images/rightCarouselArrow.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carouselPageBreak"></div>
+
+        <!-- carousel itself -->
+        <div class="carousel">
+          <div class="carouselContainerForItems">
+            <a href="index.html" class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/aespa winter album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">AESPA - ARMAGEDDON</h3>
+            </a>
+            <a href="index.html" class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/taylor swift album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">TAYLOR SWIFT - LOVER</h3>
+            </a>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/jungkook album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">JUNGKOOK - SEVEN</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/nj.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NEW JEANS - OMG</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/haerin.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/niki album.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">NIKI - BACKBURNER</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/laufey album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">LAUFEY - VALENTINE</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/tulus album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">TULUS - LANGIT ABU-ABU</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/iu album.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">IU - Shh..</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/illit album.webp"
+                alt=""
+              />
+              <h3 class="carousel__itemText">ILLIT - MAGNETIC</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/the weeknd.jpg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">THE WEEKND - DIE FOR YOU</h3>
+            </div>
+            <div class="carousel__item">
+              <img
+                class="carousel__itemImage"
+                src="../Code/public/images/ariana album.jpeg"
+                alt=""
+              />
+              <h3 class="carousel__itemText">
+                ARIANA GRANDE - imperfect for you
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footerContainer">
+      <div class="footerUpper">
+        <div class="footerLogo">
+          <div class="footer__LogoDesc">
+            <div class="navbar__logoDiv">
+              <img
+                class="navbar__logoImage"
+                src="../../public/images/Logo.png"
+                alt="Willify Logo"
+              />
+              <h1 class="navbar__text">WILLIFY</h1>
+            </div>
+            <h3 class="logoDiv__desc">
+              Willify is a renowned music streaming platform that made its debut
+              in 2006. Originating as a digital audio service, Willify quickly
+              gained prominence and has become a household name in the world of
+              music.
+            </h3>
+          </div>
+          <div class="footer__slider">
+            <label for="sliderLabel" class="footer__slider--label">
+              <input type="checkbox" checked name="" id="sliderLabel" />
+              <div class="footer__slider--slider">
+                <h4 class="primary">Indonesia</h4>
+                <h4 class="secondary">English</h4>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMPANY</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">ABOUT US</a>
+            <a class="content__link" href="#">BLOG</a>
+            <a class="content__link" href="#">FOR THE RECORD</a>
+            <a class="content__link" href="#">JOBS</a>
+            <a class="content__link" href="#">SUPPORT</a>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">COMMUNITIES</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FOR ARTIST</a>
+            <a class="content__link" href="#">DEVELOPERS</a>
+            <a class="content__link" href="#">ADVERTISING</a>
+            <a class="content__link" href="#">INVESTORS</a>
+            <a class="content__link" href="#">VENDORS</a>
+            <a class="content__link" href="#">ACCOUNT</a>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="content__titleNavigation">
+            <h3 class="content__title">Socials</h3>
+            <img
+              class="content__arrow"
+              src="../../public/images/Expand Arrow.png"
+              alt=""
+            />
+          </div>
+          <div class="content__items">
+            <a class="content__link" href="#">FACEBOOK</a>
+            <a class="content__link" href="#">X</a>
+            <a class="content__link" href="#">INSTAGRAM</a>
+          </div>
+        </div>
+        <div class="footerChat">
+          <img
+            class="footerChat__image"
+            src="../../public/images/Illustration - dancing.png"
+            alt=""
+          />
+          <div class="footerInput">
+            <h4 class="footerInput__text">Having trouble? Chat us!</h4>
+            <input
+              type="text"
+              name="chatInput"
+              id="chatInput"
+              placeholder="Type here!"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footerLower">
+        <div class="footerLower__left">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../../public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">2024 Komari Software Inc.</h3>
+          </div>
+          <a class="footer__link" href="#">Privacy Policy</a>
+          <a class="footer__link" href="#">Terms of Use</a>
+          <a class="footer__link" href="#">Legal</a>
+          <a class="footer__link" href="#">Sidemap</a>
+          <a class="footer__link" href="#">Cookies</a>
+        </div>
+        <div class="footerLower__right">
+          <div class="footer__copyright">
+            <img
+              class="copyright__image"
+              src="../../public/images/Copyright.png"
+              alt="copyright"
+            />
+            <h3 class="copyright__text">Indonesia</h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

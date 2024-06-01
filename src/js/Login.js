@@ -1,4 +1,9 @@
-import { errorInput, errorValidationPassed, accounts } from "./Register.js";
+import { errorInput, errorValidationPassed } from "../js/Register.js";
+import {
+  accounts,
+  accountStateLogin,
+  accountStateLogout,
+} from "../js/Accounts.js";
 
 const errorMessages = {
   default: `<h5 class="form__errorMessage">Please input the required form.</h5>`,
@@ -9,10 +14,6 @@ const errorMessages = {
 
   invalid: `<h5 class="form__errorMessage passRegex">Invalid login or password. Please try again.</h5>`,
 };
-
-const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
-const passwordRegex =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 let errorControl = [];
 

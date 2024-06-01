@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/MainStyles.css" />
     <!-- <script defer src="../js/Register.js" type="module"></script> -->
     <script defer src="../js/Register.js" type="module"></script>
+    <script defer src="../js/Accounts.js" type="module"></script>
     <title>Willify - Willify(ID)</title>
   </head>
   <body>
@@ -51,7 +52,7 @@
           </p>
 
           <!-- form -->
-          <form class="form" action="../html/HomePage.html" method="GET">
+          <form class="form" action="HomePage.html" method="GET">
             <!-- Name -->
             <div class="form__control">
               <input
@@ -191,7 +192,9 @@
             <!-- submit -->
             <div class="form__control register__submit">
               <!-- <a href="HomePage.html" class="submitButton">Register</a> -->
-              <button class="submitButton" type="submit">Register</button>
+              <button class="submitButton" type="submit">
+                <a class="registerLink" href="HomePage.html">Register</a>
+              </button>
               <label for="submitButton"
                 ><a href="#">I already have an account.</a></label
               >

@@ -1,4 +1,8 @@
-export const accounts = []; //object untukmengisi data akun
+import {
+  accounts,
+  accountStateLogin,
+  accountStateLogout,
+} from "../js/Accounts.js";
 
 const inputs = document.querySelectorAll("[data-form-input]");
 const submitButton = document.querySelector(".submitButton");
@@ -22,12 +26,13 @@ const errorMessages = {
 
   terms: `<h5 class="form__errorMessage--Age--Gender terms">Please agree to the terms of service.</h5>`,
 
-  username: `<h5 class="form__errorMessage--Username">Username is taken, please choose another username.</h5>`,
+  username: `<h5 class="form__errorMessage .usernameError">Username is taken, please choose another username.</h5>`,
 };
 
-const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
-const passwordRegex =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+const digits = "0123456789";
+const upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+const specialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 //array untuk mengisi
 let errorControl = [];
@@ -62,7 +67,9 @@ export function errorValidationPassed(inputForParameter, errorMessageClass) {
   }
 }
 
-const submit = submitButton.addEventListener("click", function (e) {
+const form = document.querySelector(".form");
+
+const submit = form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formValue = {};
@@ -107,7 +114,7 @@ const submit = submitButton.addEventListener("click", function (e) {
       );
 
       if (usernameTaken) {
-        errorMessageClass = `.form__errorMessage--Username`;
+        errorMessageClass = `.form__errorMessage .usernameError`;
         errorInput(
           inputForParameter,
           errorMessageClass,
@@ -121,7 +128,7 @@ const submit = submitButton.addEventListener("click", function (e) {
 
     //validasi email
     if (inputForParameter === "email") {
-      if (emailRegex.test(input.value)) {
+      if (input.value.includes("@") && input.value.includes(".")) {
         newAccount[`${inputForParameter}`] = input.value;
         return;
       } else {
@@ -132,11 +139,36 @@ const submit = submitButton.addEventListener("click", function (e) {
 
     //validasi password
     if (inputForParameter === "pass") {
-      if (passwordRegex.test(input.value)) {
+      let hasDigit = false;
+      let hasUpper = false;
+      let hasLower = false;
+      let hasSpecial = false;
+
+      for (let i = 0; i < input.value.length; i++) {
+        let char = input.value[i];
+
+        if (digits.includes(char)) {
+          hasDigit = true;
+        } else if (upperCaseLetters.includes(char)) {
+          hasUpper = true;
+        } else if (lowerCaseLetters.includes(char)) {
+          hasLower = true;
+        } else if (specialCharacters.includes(char)) {
+          hasSpecial = true;
+        }
+      }
+
+      if (
+        input.value.length >= 8 &&
+        hasDigit &&
+        hasUpper &&
+        hasLower &&
+        hasSpecial
+      ) {
         newAccount[`${inputForParameter}`] = input.value;
         return;
       } else {
-        errorMessageClass = `.form__errorMessage .passRegex`;
+        errorMessageClass = `.form__errorMessage .passwordRegex`;
         errorInput(
           inputForParameter,
           errorMessageClass,
@@ -167,8 +199,8 @@ const submit = submitButton.addEventListener("click", function (e) {
   accounts.push(newAccount);
   // console.log(errorControl);
   showError(errorControl);
+  console.log(accounts);
 });
-console.log(accounts);
 
 function showError(errorControl) {
   errorControl.forEach((errorValue) => {
@@ -189,6 +221,8 @@ function showError(errorControl) {
     errorInput(errorValue, errorMessageClass, errorMessageTemp);
   });
 }
+
+accountStateLogin();
 
 /*
 if (

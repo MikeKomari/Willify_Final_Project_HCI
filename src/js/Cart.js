@@ -1,3 +1,4 @@
+//cart open and close
 const cartButton = document.querySelector(".navbar__navCart");
 const popUp = document.querySelector(".pop-up-wrapper");
 const container = document.querySelector(".wrapper");
@@ -13,37 +14,32 @@ container.addEventListener("click", function (e) {
   }
 });
 
-// counter logic
+//song detail variables
+const songImage = document.querySelector(".songAuthorDetail__img");
+const songTitle = document.querySelector(".textUpper__title").textContent;
+const songAuthor = document.querySelector(".songAuthor").textContent;
+const cartItemHomePage = document.querySelectorAll(".cartItemHome");
+const imageString = songImage.src;
+// cart logic
 let itemsInCart = 0;
-const incrementButton = document.querySelector(".plus");
-const decrementButton = document.querySelector(".minus");
-
-const itemsInCartElement = document.querySelector(".item_count_index");
-
-incrementButton.addEventListener("click", function (e) {
-  itemsInCart += 1;
-  itemsInCartElement.textContent = itemsInCart;
-});
-
-decrementButton.addEventListener("click", function (e) {
-  if (itemsInCart > 0) {
-    itemsInCart -= 1;
-    itemsInCartElement.textContent = itemsInCart;
-  }
-});
 
 const cartContainerEl = document.querySelector(".cart__container");
-const addToCartButton = document.querySelector(".add_to_cart");
+const addToCartButton = document.querySelectorAll(".add__to__cart");
 
-function renderCartUI(count = itemsInCart) {
+export function renderCartUI(imageString, songTitle, songAuthor) {
+  // console.log(imageString, songTitle, songAuthor);
+  if (itemsInCart > 0) {
+    cartItemHomePage.forEach((item) => item.classList.remove("hidden"));
+    cartItemHomePage.forEach((item) => (item.textContent = itemsInCart));
+  } else {
+    cartItemHomePage.forEach((item) => item.classList.add("hidden"));
+  }
   const markup = `<div class="cart__item">
-  <img src="images/image-product-1-thumbnail.jpg" />
+  <img class="imageStringCartImage" src="${imageString}" />
   <div class="cart__desc">
-    <p class="cart__title">Fall Limited Edition Sneakers</p>
+    <p class="cart__title">${songTitle}</p>
     <p class="cart__price">
-      $125.00 x ${count} <span class="cart__price-accent">$${
-    125 * count
-  }.00</span>
+      ${songAuthor} <span class="cart__price-accent">$6.99</span>
     </p>
   </div>
   <button class="remove">
@@ -74,7 +70,7 @@ function renderCartUI(count = itemsInCart) {
       cartItem.remove();
     }
     checkoutButton.classList.add("hidden");
-    numberInBucketCart = 0;
+    itemsInCart = 0;
     checkItemCartNum();
   });
 
@@ -84,7 +80,7 @@ function renderCartUI(count = itemsInCart) {
     if (cartItem) {
       cartItem.remove();
     }
-    numberInBucketCart -= 1;
+    itemsInCart -= 1;
     checkItemCartNum();
   });
 }
@@ -92,23 +88,37 @@ function renderCartUI(count = itemsInCart) {
 //checkoutbutton
 const checkoutButton = document.querySelector(".checkout");
 
-let numberInBucketCart = 0;
+const emptyCart = document.querySelectorAll(".pop-up_content_empty");
 
-const emptyCart = document.querySelector(".pop-up_content_empty");
-addToCartButton.addEventListener("click", function () {
-  renderCartUI();
-  numberInBucketCart += 1;
-  checkItemCartNum();
+addToCartButton.forEach((button) => {
+  button.addEventListener("click", function () {
+    renderCartUI(imageString, songTitle, songAuthor);
+    itemsInCart += 1;
+    checkItemCartNum();
+  });
 });
+// addToCartButton.addEventListener("click", function () {
+//   renderCartUI();
+//   itemsInCart += 1;
+//   checkItemCartNum();
+// });
+
+// renderCartUI(imageString, songTitle, songAuthor);
 
 function checkItemCartNum() {
-  if (numberInBucketCart != 0) {
+  if (itemsInCart != 0) {
     checkoutButton.classList.remove("hidden");
-    emptyCart.classList.add("hidden");
+    emptyCart.forEach((cart) => {
+      cart.classList.add("hidden");
+    });
+    // emptyCart.classList.add("hidden");
     console.log("haerin");
   } else {
     checkoutButton.classList.add("hidden");
-    emptyCart.classList.remove("hidden");
+    emptyCart.forEach((cart) => {
+      cart.classList.remove("hidden");
+    });
+    // emptyCart.classList.remove("hidden");
     console.log("minji");
   }
 }

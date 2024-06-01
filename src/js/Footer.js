@@ -26,30 +26,6 @@ sliderTokped.addEventListener("click", function (e) {
 
 let mediaScreenFlag = window.matchMedia("(max-width: 768px)");
 
-// function screenTest(e) {
-//   if (e.matches) {
-//     dropDownContent.classList.add("hidden");
-//     dropDownArrow.addEventListener("click", function (e) {
-//       dropDownContent.classList.toggle("hidden");
-//       //   dropDownContent.classList.add("footerAppear");
-//       //   dropDownContent.style.display = "flex";
-//     });
-
-//     // dropDownArrow.addEventListener("mouseover", function (e) {
-//     //   dropDownContent.classList.toggle("hidden");
-//     // });
-
-//     // dropDownArrow.addEventListener("mouseout", function (e) {
-//     //   dropDownContent.classList.toggle("hidden");
-//     // });
-//   } else {
-//   }
-// }
-
-// mediaScreenFlag.addListener(screenTest);
-
-// screenTest(mediaScreenFlag);
-
 function screenTest(e) {
   if (e.matches) {
     const dropDownContents = document.querySelectorAll(".content__items");
@@ -62,8 +38,6 @@ function screenTest(e) {
         dropDownContent.classList.toggle("hidden");
       });
     });
-  } else {
-    // ...
   }
 }
 
