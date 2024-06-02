@@ -17,8 +17,8 @@ let carouselItems = Array.from(document.querySelectorAll(".carousel__item"));
 let carouselLength = carouselItems.length;
 // console.log(carouselLength);
 let carouselIndex = 0;
-let carouselWidthChanged = 300;
-let carouselWidthChanged5Items = 1500;
+let carouselWidthChanged = 100;
+let carouselWidthChanged5Items = 500;
 
 let scrollPos = 0;
 
@@ -65,13 +65,18 @@ setInterval(() => {
     console.log("haerin");
   }
 
-  // if (scrollPos >= carouselWidthChanged5Items) {
-  //   let currentWidth = carouselContainerItems.offsetWidth;
-  //   carouselContainerItems.style.width = currentWidth + 400 + "px";
+  if (scrollPos >= carouselWidthChanged5Items) {
+    let currentWidth = carouselContainerItems.offsetWidth;
+    carouselContainerItems.style.width = currentWidth + 400 + "px";
 
-  //   carouselWidthChanged5Items += carouselWidthChanged5Items;
-  // }
-}, 200);
+    let currentColumns = 12;
+
+    carouselContainerItems.style.gridTemplateColumns = `repeat(${
+      currentColumns + 1
+    }, 1fr)`;
+    carouselWidthChanged5Items += carouselWidthChanged5Items;
+  }
+}, 150);
 
 // let currentWidth = carouselContainer.offsetWidth;
 // carouselContainer.style.width = currentWidth + 600 + "px";

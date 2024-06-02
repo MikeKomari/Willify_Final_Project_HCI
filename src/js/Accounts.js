@@ -1,5 +1,5 @@
 //Not login === 0, login === 1
-let accountState = 1;
+export let accountState = 1;
 
 export function accountStateLogin() {
   accountState = 1;

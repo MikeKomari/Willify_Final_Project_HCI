@@ -1,3 +1,4 @@
+import { accountState } from "../js/Accounts.js";
 //cart open and close
 const cartButton = document.querySelector(".navbar__navCart");
 const popUp = document.querySelector(".pop-up-wrapper");
@@ -25,6 +26,16 @@ let itemsInCart = 0;
 
 const cartContainerEl = document.querySelector(".cart__container");
 const addToCartButton = document.querySelectorAll(".add__to__cart");
+
+if (accountState === 0) {
+  addToCartButton.forEach((button) => {
+    button.classList.add("hidden");
+  });
+} else {
+  addToCartButton.forEach((button) => {
+    button.classList.remove("hidden");
+  });
+}
 
 export function renderCartUI(imageString, songTitle, songAuthor) {
   // console.log(imageString, songTitle, songAuthor);

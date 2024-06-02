@@ -36,7 +36,7 @@ a {
 .songAuthorDetail__img {
   width: 600px;
   /* max-width: 100%; */
-  height: calc(100% + 200px);
+  /* height: 500px; */
   object-fit: cover;
   margin-left: 5rem;
   margin-top: 2rem;
