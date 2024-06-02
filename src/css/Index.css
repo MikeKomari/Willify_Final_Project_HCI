@@ -419,11 +419,26 @@ body {
 }
 
 .userPNG {
+  position: relative;
+}
+
+.userPNG--img {
   width: 40px;
   align-self: center;
   height: 40px;
-  margin-top: 5px;
+  margin-top: -12px;
   margin-left: -10px;
+  cursor: pointer;
+}
+
+.accountFeatureContainer {
+  position: absolute;
+  background-color: var(--three);
+  transform: scale(0.8);
+  right: -4rem;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
 }
 
 .pagebreak__quotes {
