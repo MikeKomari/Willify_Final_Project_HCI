@@ -19,7 +19,7 @@
     <script defer src="src/js/Index.js" type="module"></script>
     <script defer src="src/js/Carousel.js" type="module"></script>
     <script defer src="src/js/Footer.js" type="module"></script>
-    <script defer src="src/js/RandomiseSOTD.js" type="module"></script>
+    <script defer src="src/js/RandomiseSOTDIndexHTML.js" type="module"></script>
     <script defer src="src/js/FAQIndex.js" type="module"></script>
 
     <title>Willify - Willify(ID)</title>
@@ -79,11 +79,7 @@
       <div class="sidebar-wrapper hidden hiddenWithAnimation">
         <div class="sidebar__content">
           <div class="sidebar__profile">
-            <img
-              class="userImage"
-              src="../Code/public/images/User.png"
-              alt="User"
-            />
+            <img class="userImage" src="public/images/User.png" alt="User" />
             <div class="sidebar__username">
               <h2 class="username__name">MICHAEL KIMEISON</h2>
               <h2 class="username__username">@Komari54</h2>
@@ -96,7 +92,7 @@
             <div class="featureItems">
               <img
                 class="featureItems__img"
-                src="../Code/public/images/User.png"
+                src="public/images/User.png"
                 alt=""
               />
               <h3 class="featureItems__text">Account</h3>
@@ -104,7 +100,7 @@
             <div class="featureItems">
               <img
                 class="featureItems__img"
-                src="../Code/public/images/friends.png"
+                src="public/images/friends.png"
                 alt=""
               />
               <h3 class="featureItems__text">Friends</h3>
@@ -112,7 +108,7 @@
             <div class="featureItems">
               <img
                 class="featureItems__img"
-                src="../Code/public/images/uta.png"
+                src="public/images/uta.png"
                 alt=""
               />
               <h3 class="featureItems__text">Songs</h3>
@@ -175,9 +171,9 @@
           <a href="index.html"
             ><div class="navbar__navLink">
               <h3 class="navbar__navText">Home</h3>
-              <div class="navbar__navDecor"></div></div
+              <div class="navbar__navDecor brighten"></div></div
           ></a>
-          <a href="#"
+          <a href="src/html/Songs.html"
             ><div class="navbar__navLink">
               <h3 class="navbar__navText">Collection</h3>
               <div class="navbar__navDecor"></div></div
@@ -196,16 +192,12 @@
 
         <div class="navbar__extraNav">
           <div class="navbar__navCartDiv">
-            <img
-              class="navbar__navCart"
-              src="../Code/public/images/cart.png"
-              alt=""
-            />
+            <img class="navbar__navCart" src="public/images/cart.png" alt="" />
             <p class="cartItem hidden">1</p>
           </div>
           <div class="navbar__navSeperator"></div>
           <div class="navbar__account">
-            <a href="#"
+            <a href="src/html/Login.html"
               ><button class="buttonOne navbar__buttonLogin">Log In</button></a
             >
             <a href="../Code/src/html/Register.html"
@@ -219,7 +211,7 @@
                 <div class="sidebar__profile">
                   <img
                     class="userImage"
-                    src="../Code/public/images/User.png"
+                    src="public/images/User.png"
                     alt="User"
                   />
                   <div class="sidebar__username">
@@ -231,7 +223,7 @@
                   <div class="featureItems">
                     <img
                       class="featureItems__img"
-                      src="../Code/public/images/User.png"
+                      src="public/images/User.png"
                       alt=""
                     />
                     <h3 class="featureItems__text">Account</h3>
@@ -239,7 +231,7 @@
                   <div class="featureItems">
                     <img
                       class="featureItems__img"
-                      src="../Code/public/images/friends.png"
+                      src="public/images/friends.png"
                       alt=""
                     />
                     <h3 class="featureItems__text">Friends</h3>
@@ -247,7 +239,7 @@
                   <div class="featureItems">
                     <img
                       class="featureItems__img"
-                      src="../Code/public/images/uta.png"
+                      src="public/images/uta.png"
                       alt=""
                     />
                     <h3 class="featureItems__text">Songs</h3>
@@ -332,7 +324,7 @@
             <div class="pageBreak pageBreak__quotes"></div>
             <div class="newSurprise__everyDayText">
               <h3 class="newSurprise__everyDayText--Text">EVERY DAY</h3>
-              <img src="../Code/public/images/Arrow 3.png" alt="" />
+              <img src="public/images/Arrow 3.png" alt="" />
             </div>
             <div class="newSurprise__heroText">
               <h1 class="heroText__title">SONGS</h1>
@@ -402,7 +394,7 @@
               <div class="faq__content--item">
                 <div class="faq__content--item--questionDiv">
                   <h3 class="textTitle faq__content--item--question">
-                    How do I create an account?
+                    Do I need an account to make a purchase?
                   </h3>
                   <img
                     class="faq__content--item--arrow"
@@ -411,12 +403,45 @@
                   />
                 </div>
                 <h5 class="textDescription faq__content--item--answer">
-                  To create an account, simply click on the "Register" button on
-                  the top right corner of the page. You will be asked to provide
-                  some basic information such as your name, email address, and
-                  password. Once you've completed the registration process,
-                  you'll be able to log in and start enjoying all the features
-                  of our music platform.
+                  Yes, creating an account is required for making a purchase.
+                  This allows us to provide you with a better shopping
+                  experience, track your orders, and offer personalized
+                  recommendations.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    How do I search for music on your website?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  You can click on "Collection" at the top of the page to find
+                  specific albums, artists, or songs. Additionally, you can
+                  browse through our categories and curated playlists for more
+                  options.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    What types of music products do you offer?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  We offer a wide range of music products from all categories.
                 </h5>
                 <div class="faqPageBreak"></div>
               </div>
@@ -479,7 +504,7 @@
               <a href="#" class="arrowCarouselLink">
                 <img
                   class="carouselDecoration__arrow"
-                  src="../Code/public/images/Up Arrow.png"
+                  src="public/images/Up Arrow.png"
                   alt=""
                 />
               </a>
@@ -490,7 +515,7 @@
               <button class="carouselButton prev-button">
                 <img
                   class="carouselButton--img"
-                  src="../Code/public/images/leftCarouselArrow.png"
+                  src="public/images/leftCarouselArrow.png"
                   alt=""
                 />
               </button>
@@ -499,7 +524,7 @@
               <button class="carouselButton next-button">
                 <img
                   class="carouselButton--img"
-                  src="../Code/public/images/rightCarouselArrow.png"
+                  src="public/images/rightCarouselArrow.png"
                   alt=""
                 />
               </button>
@@ -515,7 +540,7 @@
             <a href="index.html" class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/aespa winter album.jpg"
+                src="public/images/aespa winter album.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">AESPA - ARMAGEDDON</h3>
@@ -523,7 +548,7 @@
             <a href="index.html" class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/taylor swift album.webp"
+                src="public/images/taylor swift album.webp"
                 alt=""
               />
               <h3 class="carousel__itemText">TAYLOR SWIFT - LOVER</h3>
@@ -531,7 +556,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/jungkook album.webp"
+                src="public/images/jungkook album.webp"
                 alt=""
               />
               <h3 class="carousel__itemText">JUNGKOOK - SEVEN</h3>
@@ -539,23 +564,25 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/nj.jpg"
+                src="public/images/nj.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">NEW JEANS - OMG</h3>
             </div>
+            <a href="src/html/how sweet.html">
+              <div class="carousel__item">
+                <img
+                  class="carousel__itemImage"
+                  src="public/images/haerin.jpeg"
+                  alt=""
+                />
+                <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
+              </div>
+            </a>
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/haerin.jpeg"
-                alt=""
-              />
-              <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
-            </div>
-            <div class="carousel__item">
-              <img
-                class="carousel__itemImage"
-                src="../Code/public/images/niki album.jpeg"
+                src="public/images/niki album.jpeg"
                 alt=""
               />
               <h3 class="carousel__itemText">NIKI - BACKBURNER</h3>
@@ -563,7 +590,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/laufey album.jpg"
+                src="public/images/laufey album.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">LAUFEY - VALENTINE</h3>
@@ -571,7 +598,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/tulus album.jpg"
+                src="public/images/tulus album.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">TULUS - LANGIT ABU-ABU</h3>
@@ -579,7 +606,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/iu album.jpg"
+                src="public/images/iu album.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">IU - Shh..</h3>
@@ -587,7 +614,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/illit album.webp"
+                src="public/images/illit album.webp"
                 alt=""
               />
               <h3 class="carousel__itemText">ILLIT - MAGNETIC</h3>
@@ -595,7 +622,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/the weeknd.jpg"
+                src="public/images/the weeknd.jpg"
                 alt=""
               />
               <h3 class="carousel__itemText">THE WEEKND - DIE FOR YOU</h3>
@@ -603,7 +630,7 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../Code/public/images/ariana album.jpeg"
+                src="public/images/ariana album.jpeg"
                 alt=""
               />
               <h3 class="carousel__itemText">
@@ -716,7 +743,7 @@
           <div class="footer__copyright">
             <img
               class="copyright__image"
-              src="../Code/public/images/Copyright.png"
+              src="public/images/Copyright.png"
               alt="copyright"
             />
             <h3 class="copyright__text">2024 Komari Software Inc.</h3>
@@ -731,7 +758,7 @@
           <div class="footer__copyright">
             <img
               class="copyright__image"
-              src="../Code/public/images/Copyright.png"
+              src="public/images/Copyright.png"
               alt="copyright"
             />
             <h3 class="copyright__text">Indonesia</h3>

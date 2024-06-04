@@ -187,7 +187,7 @@
   animation: footerLinkAppear 1s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .footerUpper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -233,6 +233,16 @@
     transform: scale(0.6);
   }
   .footer__link {
+    font-size: 0.5rem;
+  }
+
+  .footerLower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright__text {
     font-size: 0.5rem;
   }
 }

@@ -1,12 +1,17 @@
 //Not login === 0, login === 1
-export let accountState = 1;
+export let accountState = 0;
 
 export function accountStateLogin() {
-  accountState = 1;
+  localStorage.setItem("accountState", 1);
 }
 
 export function accountStateLogout() {
-  accountState = 0;
+  localStorage.setItem("accountState", 0);
+  // accountState = 0;
+}
+
+export function getAccountState() {
+  return Number(localStorage.getItem("accountState"));
 }
 
 export const accounts = []; //object untukmengisi data akun
@@ -21,7 +26,7 @@ const accountIcon = document.querySelectorAll(".userPNG");
 const accountDropDown = document.querySelectorAll(".accountFeatureContainer");
 const logOutButton = document.querySelectorAll(".logOutButton");
 function navChange() {
-  if (accountState === 1) {
+  if (getAccountState() === 1) {
     loginRegisterButton.forEach((button) => {
       button.classList.add("hidden");
     });

@@ -264,11 +264,25 @@ input[type="checkbox"] {
   .ContentWrapper {
     display: block;
   }
+  .regisWrapper {
+    padding: 0;
+  }
 }
 
 @media (max-width: 500px) {
   body {
     font-size: 0.8rem;
+  }
+  .age__gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+  }
+  .ageInputControl,
+  .genderInputControl {
+    gap: 10px;
   }
 }
 

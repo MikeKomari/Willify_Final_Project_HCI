@@ -71,3 +71,30 @@
   font-weight: 400;
   /* padding: 0.5rem 1rem; */
 }
+
+.submitButton--login {
+  padding: 8px 20px;
+
+  background-color: var(--one);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  /* color: white;
+  font-weight: 600;
+  text-decoration: none; */
+}
+
+@media (max-width: 768px) {
+  .item-1 {
+    display: block;
+  }
+
+  .item-2 {
+    display: none;
+  }
+  .regisWrapper {
+    padding: 0;
+  }
+}

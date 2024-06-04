@@ -2,7 +2,11 @@ import {
   accounts,
   accountStateLogin,
   accountStateLogout,
+  getAccountState,
 } from "../js/Accounts.js";
+import { Account } from "./Auth.js";
+
+const accountList = new Account();
 
 const inputs = document.querySelectorAll("[data-form-input]");
 const submitButton = document.querySelector(".submitButton");
@@ -51,8 +55,8 @@ export function errorInput(
   const existingErrorMessage = document.querySelector(
     `.${inputForParameter}InputControl + ${errorMessageClass}`
   );
-
   if (!existingErrorMessage) {
+    console.log(errorElement);
     errorElement.insertAdjacentHTML("afterend", errorMessageDisplayed);
   }
 }
@@ -69,8 +73,10 @@ export function errorValidationPassed(inputForParameter, errorMessageClass) {
 
 const form = document.querySelector(".form");
 
-const submit = form.addEventListener("submit", function (e) {
+const submit = submitButton.addEventListener("click", function (e) {
   e.preventDefault();
+
+  let isError = false;
 
   const formValue = {};
 
@@ -87,6 +93,8 @@ const submit = form.addEventListener("submit", function (e) {
         if (!errorControl.includes(inputForParameter)) {
           errorControl.push(inputForParameter);
         }
+        console.log(isError);
+        isError = true;
         return;
       } else {
         errorControl = errorControl.filter(
@@ -120,6 +128,7 @@ const submit = form.addEventListener("submit", function (e) {
           errorMessageClass,
           errorMessages.username
         );
+        isError = true;
         return;
       } else {
         newAccount[`${inputForParameter}`] = input.value;
@@ -134,6 +143,7 @@ const submit = form.addEventListener("submit", function (e) {
       } else {
         errorMessageClass = `.form__errorMessage .emailRegex`;
         errorInput(inputForParameter, errorMessageClass, errorMessages.email);
+        isError = true;
       }
     }
 
@@ -174,6 +184,7 @@ const submit = form.addEventListener("submit", function (e) {
           errorMessageClass,
           errorMessages.password
         );
+        isError = true;
       }
     }
 
@@ -187,6 +198,7 @@ const submit = form.addEventListener("submit", function (e) {
             errorMessageClass,
             errorMessages.password2
           );
+          isError = true;
           return;
         } else {
           newAccount[`${inputForParameter}`] = input.value;
@@ -196,10 +208,15 @@ const submit = form.addEventListener("submit", function (e) {
     }
   });
 
-  accounts.push(newAccount);
-  // console.log(errorControl);
   showError(errorControl);
-  console.log(accounts);
+  if (isError) return;
+
+  accountList.add(newAccount);
+  // console.log(accounts);
+
+  accountStateLogin();
+  console.log(getAccountState());
+  window.location.href = "HomePage.html";
 });
 
 function showError(errorControl) {
@@ -222,7 +239,7 @@ function showError(errorControl) {
   });
 }
 
-accountStateLogin();
+// accountStateLogin();
 
 /*
 if (

@@ -68,8 +68,8 @@ textarea {
 }
 
 .imageStringCartImage {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   margin-top: 1rem;
 }

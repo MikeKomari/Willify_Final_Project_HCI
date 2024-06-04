@@ -1,3 +1,7 @@
+import { getAccountState, accounts } from "../js/Accounts.js";
+import { Account } from "../js/Auth.js";
+const account = new Account();
+
 // sidebar
 const hamburgerMenu = document.querySelector(".navbar__hamburgerMenu");
 const navBar = document.querySelector(".sidebar-wrapper");
@@ -32,3 +36,34 @@ checkOutBestSellerButton.addEventListener("click", function (e) {
   // Scroll to the position
   window.scrollTo({ top: scrollToPosition, behavior: "smooth" });
 });
+
+const sidebarName = document.querySelectorAll(".username__name");
+const sidebarUsername = document.querySelectorAll(".username__username");
+// let accountIndex = account.length;
+// console.log(account.getUsername());
+
+if (getAccountState() === 1) {
+  const username = account.getUsername();
+  const latestFirstName = account.getLatestFirstName();
+  const latestSecondName = account.getLatestSecondName();
+
+  if (latestFirstName === "" || latestSecondName === "") {
+    sidebarName.forEach((name) => {
+      name.innerHTML = `@${username}`;
+    });
+  } else {
+    sidebarName.forEach((name) => {
+      name.innerHTML = `${latestFirstName} ${latestSecondName}`;
+    });
+  }
+  sidebarUsername.forEach((user) => {
+    user.innerHTML = `@${username}`;
+  });
+} else {
+  sidebarName.forEach((name) => {
+    name.innerHTML = `Guest`;
+  });
+  sidebarUsername.forEach((username) => {
+    username.innerHTML = `Guest`;
+  });
+}

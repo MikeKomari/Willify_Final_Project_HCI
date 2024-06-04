@@ -46,7 +46,8 @@
   grid-template-columns: repeat(2, 1fr);
   margin: 6rem;
   gap: 5rem;
-  max-width: 100%;
+  width: 100%;
+  padding: 4rem;
 }
 
 .faq__content--item {

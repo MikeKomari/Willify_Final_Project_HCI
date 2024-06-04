@@ -15,26 +15,23 @@ carouselItems.forEach((item, index) => {
   item.style.transition = "transform 0.5s ease-out";
 });
 
+let scrollFlag = 0;
+
 setInterval(() => {
-  if (scrollPos < 4550) {
-    untilMax();
+  if (scrollFlag === 0) {
+    scrollPos += 80;
+    if (scrollPos > 4650) {
+      scrollFlag = 1;
+    }
   } else {
-    returnToZero();
+    scrollPos -= 80;
+    if (scrollPos < 80) {
+      scrollFlag = 0;
+    }
   }
   carouselContainer.scrollTo({
     left: scrollPos,
     behavior: "smooth",
   });
+  console.log(scrollPos);
 }, 150);
-
-function untilMax() {
-  while (scrollPos < 4550) {
-    scrollPos += 80;
-  }
-}
-
-function returnToZero() {
-  while (scrollPos > 0) {
-    scrollPos -= 80;
-  }
-}

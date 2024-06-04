@@ -18,11 +18,11 @@
     <script defer src="../js/Accounts.js" type="module"></script>
     <script defer src="../js/Index.js" type="module"></script>
     <script defer src="../js/Footer.js" type="module"></script>
-    <!-- <script
+    <script
       defer
       src="../js/CarouselScrollFrontToBack.js"
       type="module"
-    ></script> -->
+    ></script>
     <!-- <script defer src="../js/CarouselInfiniteScroll.js" type="module"></script> -->
     <script defer src="../js/SongDetail.js" type="module"></script>
     <script defer src="../js/Collection.js" type="module"></script>
@@ -136,7 +136,7 @@
       </div>
 
       <nav class="navbar">
-        <a href="index.html"
+        <a href="../../index.html"
           ><div class="navbar__logoDiv">
             <img
               class="navbar__logoImage indexPage"
@@ -382,7 +382,7 @@
       <div class="playlistContainer">
         <div class="playlistDecoration">
           <div class="playlistDecoration__left">
-            <h3 class="playlistDecoration__text">Playlist</h3>
+            <h3 class="playlistDecoration__textMain">Playlist</h3>
           </div>
           <h3 class="playlistDecoration__showAll">Show All</h3>
         </div>
@@ -396,8 +396,10 @@
               src="../../public/images/playlist image.webp"
               alt=""
             />
-            <h3 class="playlist__itemText">Mood Booster</h3>
-            <h3 class="playlist__itemTextDesc">Hits to boost your mood</h3>
+            <h3 class="playlist__itemTextPlaylist">Mood Booster</h3>
+            <h3 class="playlist__itemTextDescPlayist">
+              Hits to boost your mood
+            </h3>
           </div>
           <div class="playlist__item">
             <img
@@ -405,26 +407,10 @@
               src="../../public/images/playlist image.webp"
               alt=""
             />
-            <h3 class="playlist__itemText">Mood Booster</h3>
-            <h3 class="playlist__itemTextDesc">Hits to boost your mood</h3>
-          </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImage"
-              src="../../public/images/playlist image.webp"
-              alt=""
-            />
-            <h3 class="playlist__itemText">Mood Booster</h3>
-            <h3 class="playlist__itemTextDesc">Hits to boost your mood</h3>
-          </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImage"
-              src="../../public/images/playlist image.webp"
-              alt=""
-            />
-            <h3 class="playlist__itemText">Mood Booster</h3>
-            <h3 class="playlist__itemTextDesc">Hits to boost your mood</h3>
+            <h3 class="playlist__itemTextPlaylist">Mood Booster</h3>
+            <h3 class="playlist__itemTextDescPlayist">
+              Hits to boost your mood
+            </h3>
           </div>
         </div>
         <div class="excess hidden">
@@ -434,8 +420,10 @@
               src="../../public/images/playlist image.webp"
               alt=""
             />
-            <h3 class="playlist__itemText">Mood Booster</h3>
-            <h3 class="playlist__itemTextDesc">Hits to boost your mood</h3>
+            <h3 class="playlist__itemTextPlaylist">Mood Booster</h3>
+            <h3 class="playlist__itemTextDescPlayist">
+              Hits to boost your mood
+            </h3>
           </div>
         </div>
       </div>
@@ -569,18 +557,6 @@
               <h3 class="playlist__itemDuration">3:03</h3>
             </div>
           </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <h3 class="playlist__itemText">enchanted</h3>
-              <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-            </div>
-            <h3 class="playlist__itemDuration">3:03</h3>
-          </div>
         </div>
       </div>
       <!-- songs  Hip-Hop-->
@@ -708,18 +684,6 @@
               </div>
               <h3 class="playlist__itemDuration">3:03</h3>
             </div>
-          </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <h3 class="playlist__itemText">enchanted</h3>
-              <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-            </div>
-            <h3 class="playlist__itemDuration">3:03</h3>
           </div>
         </div>
       </div>
@@ -989,18 +953,6 @@
               <h3 class="playlist__itemDuration">3:03</h3>
             </div>
           </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <h3 class="playlist__itemText">enchanted</h3>
-              <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-            </div>
-            <h3 class="playlist__itemDuration">3:03</h3>
-          </div>
         </div>
       </div>
       <!-- songs  R&B-->
@@ -1129,18 +1081,6 @@
               <h3 class="playlist__itemDuration">3:03</h3>
             </div>
           </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <h3 class="playlist__itemText">enchanted</h3>
-              <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-            </div>
-            <h3 class="playlist__itemDuration">3:03</h3>
-          </div>
         </div>
       </div>
       <!-- songs  browse all-->
@@ -1154,21 +1094,25 @@
 
         <div class="playlistPageBreak"></div>
 
+        <!-- search for songs -->
+
         <div class="songContainer">
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <div class="playlistTextDiv">
-                <h3 class="playlist__itemText">enchanted</h3>
-                <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
+          <a href="save your tears.html">
+            <div class="playlist__item">
+              <img
+                class="playlist__itemImageSong"
+                src="../../public/images/the weeknd.jpg"
+                alt=""
+              />
+              <div class="playlistText">
+                <div class="playlistTextDiv">
+                  <h3 class="playlist__itemText">save your tears</h3>
+                  <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
+                </div>
+                <h3 class="playlist__itemDuration">3:03</h3>
               </div>
-              <h3 class="playlist__itemDuration">3:03</h3>
             </div>
-          </div>
+          </a>
           <div class="playlist__item">
             <img
               class="playlist__itemImageSong"
@@ -1716,18 +1660,6 @@
               </div>
               <h3 class="playlist__itemDuration">3:03</h3>
             </div>
-          </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <h3 class="playlist__itemText">enchanted</h3>
-              <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-            </div>
-            <h3 class="playlist__itemDuration">3:03</h3>
           </div>
         </div>
       </div>
