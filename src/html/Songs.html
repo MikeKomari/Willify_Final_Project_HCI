@@ -6,7 +6,7 @@
     <link rel="icon" href="../../public/images/Logo.png" />
     <link rel="stylesheet" href="../css/MainStyles.css" />
     <link rel="stylesheet" href="../css/Index.css" />
-    <!-- <link rel="stylesheet" href="src/css/Cart.css" /> -->
+    <link rel="stylesheet" href="src/css/Cart.css" />
     <link rel="stylesheet" href="../css/Sidebar.css" />
     <link rel="stylesheet" href="../css/Carousel.css" />
     <link rel="stylesheet" href="../css/Footer.css" />
@@ -14,16 +14,15 @@
     <link rel="stylesheet" href="../css/FAQ.css" />
     <link rel="stylesheet" href="../css/Collection.css" />
 
-    <!-- <script defer src="../js/Cart.js" type="module"></script> -->
+    <script defer src="../js/Cart.js" type="module"></script>
     <script defer src="../js/Accounts.js" type="module"></script>
     <script defer src="../js/Index.js" type="module"></script>
     <script defer src="../js/Footer.js" type="module"></script>
     <script
       defer
-      src="../js/CarouselScrollFrontToBack.js"
+      src="../js/CarouselScrollBackAndForth.js"
       type="module"
     ></script>
-    <!-- <script defer src="../js/CarouselInfiniteScroll.js" type="module"></script> -->
     <script defer src="../js/SongDetail.js" type="module"></script>
     <script defer src="../js/Collection.js" type="module"></script>
     <script defer src="../js/RandomiseSOTD.js" type="module"></script>
@@ -129,6 +128,11 @@
             <a href="About Us.html"
               ><div class="navbar__navLink">
                 <h3 class="navbar__navText">About</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink logOutButton">
+                <h3 class="navbar__navText">Log Out</h3>
                 <div class="navbar__navDecor"></div></div
             ></a>
           </div>
@@ -279,18 +283,18 @@
             <a href="index.html" class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../../public/images/aespa winter album.jpg"
+                src="../../public/images/expresso sabrina.webp"
                 alt=""
               />
-              <h3 class="carousel__itemText">AESPA - ARMAGEDDON</h3>
+              <h3 class="carousel__itemText">EXPRESSO - SABRINA CARPENTER</h3>
             </a>
             <a href="index.html" class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../../public/images/taylor swift album.webp"
+                src="../../public/images/taylor swift fortnight.png"
                 alt=""
               />
-              <h3 class="carousel__itemText">TAYLOR SWIFT - LOVER</h3>
+              <h3 class="carousel__itemText">TAYLOR SWIFT - FORTNIGHT</h3>
             </a>
             <div class="carousel__item">
               <img
@@ -303,19 +307,21 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../../public/images/nj.jpg"
+                src="../../public/images/10cm spring snow.jpg"
                 alt=""
               />
-              <h3 class="carousel__itemText">NEW JEANS - OMG</h3>
+              <h3 class="carousel__itemText">10CM - SPRING SNOW</h3>
             </div>
-            <div class="carousel__item">
-              <img
-                class="carousel__itemImage"
-                src="../../public/images/haerin.jpeg"
-                alt=""
-              />
-              <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
-            </div>
+            <a href="Song Detail.html">
+              <div class="carousel__item">
+                <img
+                  class="carousel__itemImage"
+                  src="../../public/images/haerin.jpeg"
+                  alt=""
+                />
+                <h3 class="carousel__itemText">NEW JEANS - HOW SWEET</h3>
+              </div>
+            </a>
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
@@ -335,10 +341,12 @@
             <div class="carousel__item">
               <img
                 class="carousel__itemImage"
-                src="../../public/images/tulus album.jpg"
+                src="../../public/images/10cm tell me its not a dream.jpg"
                 alt=""
               />
-              <h3 class="carousel__itemText">TULUS - LANGIT ABU-ABU</h3>
+              <h3 class="carousel__itemText">
+                10CM - TELL ME IT'S NOT A DREAM
+              </h3>
             </div>
             <div class="carousel__item">
               <img
@@ -364,16 +372,18 @@
               />
               <h3 class="carousel__itemText">THE WEEKND - DIE FOR YOU</h3>
             </div>
-            <div class="carousel__item">
-              <img
-                class="carousel__itemImage"
-                src="../../public/images/ariana album.jpeg"
-                alt=""
-              />
-              <h3 class="carousel__itemText">
-                ARIANA GRANDE - imperfect for you
-              </h3>
-            </div>
+            <a href="imperfect for you.html">
+              <div class="carousel__item">
+                <img
+                  class="carousel__itemImage"
+                  src="../../public/images/ariana album.jpeg"
+                  alt=""
+                />
+                <h3 class="carousel__itemText">
+                  ARIANA GRANDE - imperfect for you
+                </h3>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -390,7 +400,7 @@
         <div class="playlistPageBreak"></div>
 
         <div class="playlist">
-          <div class="playlist__item">
+          <div class="playlist__itemAlbum">
             <img
               class="playlist__itemImage"
               src="../../public/images/playlist image.webp"
@@ -401,7 +411,7 @@
               Hits to boost your mood
             </h3>
           </div>
-          <div class="playlist__item">
+          <div class="playlist__itemAlbum">
             <img
               class="playlist__itemImage"
               src="../../public/images/playlist image.webp"
@@ -414,7 +424,7 @@
           </div>
         </div>
         <div class="excess hidden">
-          <div class="playlist__item">
+          <div class="playlist__itemAlbum">
             <img
               class="playlist__itemImage"
               src="../../public/images/playlist image.webp"
@@ -560,7 +570,7 @@
         </div>
       </div>
       <!-- songs  Hip-Hop-->
-      <div class="playlistContainer">
+      <div class="playlistContainer hidden">
         <div class="playlistDecoration">
           <div class="playlistDecoration__left">
             <h3 class="playlistDecoration__text">Hip-Hop</h3>
@@ -688,7 +698,7 @@
         </div>
       </div>
       <!-- songs  WorkOut-->
-      <div class="playlistContainer">
+      <div class="playlistContainer hidden">
         <div class="playlistDecoration">
           <div class="playlistDecoration__left">
             <h3 class="playlistDecoration__text">WorkOut</h3>
@@ -828,7 +838,7 @@
         </div>
       </div>
       <!-- songs  Karaoke-->
-      <div class="playlistContainer">
+      <div class="playlistContainer hidden">
         <div class="playlistDecoration">
           <div class="playlistDecoration__left">
             <h3 class="playlistDecoration__text">Karaoke</h3>
@@ -1096,6 +1106,14 @@
 
         <!-- search for songs -->
 
+        <input
+          type="text"
+          name="searchSong"
+          id=""
+          placeholder="Search Your Song Here!"
+          class="searchInput"
+        />
+
         <div class="songContainer">
           <a href="save your tears.html">
             <div class="playlist__item">
@@ -1107,40 +1125,49 @@
               <div class="playlistText">
                 <div class="playlistTextDiv">
                   <h3 class="playlist__itemText">save your tears</h3>
-                  <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
+                  <h3 class="playlist__itemTextDesc">The Weeknd</h3>
+                  <h3 class="playlist__itemTextSongDesc">
+                    "Save Your Tears" is a song by the Canadian
+                    singer-songwriter the Weeknd from his fourth studio album,
+                    After Hours (2020). It was released to Dutch...
+                  </h3>
+                </div>
+                <h3 class="playlist__itemDuration">3:30</h3>
+              </div>
+            </div>
+          </a>
+          <a href="Song Detail.html">
+            <div class="playlist__item">
+              <img
+                class="playlist__itemImageSong"
+                src="../../public/images/haerin.jpeg"
+                alt=""
+              />
+              <div class="playlistText">
+                <div class="playlistTextDiv">
+                  <h3 class="playlist__itemText">how sweet</h3>
+                  <h3 class="playlist__itemTextDesc">New Jeans</h3>
+                </div>
+                <h3 class="playlist__itemDuration">3:30</h3>
+              </div>
+            </div>
+          </a>
+          <a href="imperfect for you.html">
+            <div class="playlist__item">
+              <img
+                class="playlist__itemImageSong"
+                src="../../public/images/ariana album.jpeg"
+                alt=""
+              />
+              <div class="playlistText">
+                <div class="playlistTextDiv">
+                  <h3 class="playlist__itemText">imperfect for you</h3>
+                  <h3 class="playlist__itemTextDesc">Ariana Grande</h3>
                 </div>
                 <h3 class="playlist__itemDuration">3:03</h3>
               </div>
             </div>
           </a>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <div class="playlistTextDiv">
-                <h3 class="playlist__itemText">enchanted</h3>
-                <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-              </div>
-              <h3 class="playlist__itemDuration">3:03</h3>
-            </div>
-          </div>
-          <div class="playlist__item">
-            <img
-              class="playlist__itemImageSong"
-              src="../../public/images/taylor swift album.webp"
-              alt=""
-            />
-            <div class="playlistText">
-              <div class="playlistTextDiv">
-                <h3 class="playlist__itemText">enchanted</h3>
-                <h3 class="playlist__itemTextDesc">Taylor Swift</h3>
-              </div>
-              <h3 class="playlist__itemDuration">3:03</h3>
-            </div>
-          </div>
           <div class="playlist__item">
             <img
               class="playlist__itemImageSong"

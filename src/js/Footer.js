@@ -1,10 +1,11 @@
-const sliderTokped = document.getElementById("sliderLabel");
+const sliderLanguage = document.getElementById("sliderLabel");
 const indonesiaText = document.querySelector(".primary");
 const englishText = document.querySelector(".secondary");
 
 let colorFlag = 1;
 
-sliderTokped.addEventListener("click", function (e) {
+//Fpooter language button
+sliderLanguage.addEventListener("click", function (e) {
   if (colorFlag) {
     setTimeout(() => {
       indonesiaText.style.color = "black";
@@ -20,12 +21,10 @@ sliderTokped.addEventListener("click", function (e) {
   }
 });
 
-// responsive
-// const dropDownArrow = document.querySelectorAll(".content__arrow");
-// const dropDownContent = document.querySelectorAll(".content__items");
-
+// responsive, same as @media (max-width: 768px)
 let mediaScreenFlag = window.matchMedia("(max-width: 768px)");
 
+//if under 768px, hide dropdown content
 function screenTest(e) {
   if (e.matches) {
     const dropDownContents = document.querySelectorAll(".content__items");

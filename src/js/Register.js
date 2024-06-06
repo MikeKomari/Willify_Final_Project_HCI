@@ -8,13 +8,13 @@ import { Account } from "./Auth.js";
 
 const accountList = new Account();
 
+//Data-data from form input
 const inputs = document.querySelectorAll("[data-form-input]");
 const submitButton = document.querySelector(".submitButton");
 
-//error message sedikit berbeda
 const specialInputs = ["age", "gender"];
 
-//object yang mengisi semua error message, daripada satu satu di define
+//All error message in one object
 const errorMessages = {
   ageGenderTerm: `<h5 class="form__errorMessage--Age--Gender">
     Please input the required form.
@@ -33,6 +33,7 @@ const errorMessages = {
   username: `<h5 class="form__errorMessage .usernameError">Username is taken, please choose another username.</h5>`,
 };
 
+//Password validation
 const digits = "0123456789";
 const upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -56,7 +57,6 @@ export function errorInput(
     `.${inputForParameter}InputControl + ${errorMessageClass}`
   );
   if (!existingErrorMessage) {
-    console.log(errorElement);
     errorElement.insertAdjacentHTML("afterend", errorMessageDisplayed);
   }
 }
@@ -93,7 +93,6 @@ const submit = submitButton.addEventListener("click", function (e) {
         if (!errorControl.includes(inputForParameter)) {
           errorControl.push(inputForParameter);
         }
-        console.log(isError);
         isError = true;
         return;
       } else {
@@ -117,9 +116,7 @@ const submit = submitButton.addEventListener("click", function (e) {
 
     // validasi username
     if (inputForParameter === "username") {
-      let usernameTaken = accounts.some(
-        (account) => account.username === input.value
-      );
+      let usernameTaken = accountList.findUsername(input.value);
 
       if (usernameTaken) {
         errorMessageClass = `.form__errorMessage .usernameError`;
@@ -212,10 +209,8 @@ const submit = submitButton.addEventListener("click", function (e) {
   if (isError) return;
 
   accountList.add(newAccount);
-  // console.log(accounts);
 
   accountStateLogin();
-  console.log(getAccountState());
   window.location.href = "HomePage.html";
 });
 
@@ -238,27 +233,3 @@ function showError(errorControl) {
     errorInput(errorValue, errorMessageClass, errorMessageTemp);
   });
 }
-
-// accountStateLogin();
-
-/*
-if (
-      errorValue === "ageInput" ||
-      errorValue === "genderInput" ||
-      errorValue === "termsInput"
-    ) {
-      const existingErrorMessage = document.querySelector(
-        `.${errorValue}Control + .form__errorMessage--Age--Gender--Term`
-      );
-      if (!existingErrorMessage) {
-        errorElement.insertAdjacentHTML("afterend", errorMessageAgeGenderTerm);
-      }
-    } else {
-      const existingErrorMessage = document.querySelector(
-        `.${errorValue}Control + .form__errorMessage`
-      );
-      if (!existingErrorMessage) {
-        errorElement.insertAdjacentHTML("afterend", errorMessage);
-      }
-    }
-*/

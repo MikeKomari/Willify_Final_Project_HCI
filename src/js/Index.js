@@ -16,13 +16,7 @@ const checkOutBestSellerButton = document.querySelector(
   ".content__checkItOutBar"
 );
 
-// checkOutBestSellerButton.addEventListener("click", function (e) {
-//   const targetElement = document.querySelector(".bestSellerContainer");
-
-//   // Scroll to the element
-//   targetElement.scrollIntoView({ behavior: "smooth" });
-// });
-
+const bestSellerText = document.querySelector(".bestSellerTextDiv");
 checkOutBestSellerButton.addEventListener("click", function (e) {
   const targetElement = document.querySelector(".bestSellerContainer");
 
@@ -30,13 +24,17 @@ checkOutBestSellerButton.addEventListener("click", function (e) {
   const targetPosition =
     targetElement.getBoundingClientRect().top + window.pageYOffset;
 
-  // Subtract the desired space from the position
+  // Subtract the space from the position
   const scrollToPosition = targetPosition - 200; // Replace 100 with the desired space in pixels
 
+  bestSellerText.classList.add("fadeIn");
   // Scroll to the position
   window.scrollTo({ top: scrollToPosition, behavior: "smooth" });
 });
 
+// Sidebar and Account
+
+//If login, display the username and the name
 const sidebarName = document.querySelectorAll(".username__name");
 const sidebarUsername = document.querySelectorAll(".username__username");
 // let accountIndex = account.length;
@@ -47,9 +45,9 @@ if (getAccountState() === 1) {
   const latestFirstName = account.getLatestFirstName();
   const latestSecondName = account.getLatestSecondName();
 
-  if (latestFirstName === "" || latestSecondName === "") {
+  if (latestSecondName === "") {
     sidebarName.forEach((name) => {
-      name.innerHTML = `@${username}`;
+      name.innerHTML = `${latestFirstName}`;
     });
   } else {
     sidebarName.forEach((name) => {

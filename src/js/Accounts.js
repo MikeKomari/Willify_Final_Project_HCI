@@ -16,9 +16,6 @@ export function getAccountState() {
 
 export const accounts = []; //object untukmengisi data akun
 
-console.log(accounts);
-console.log(accountState);
-
 //navbar change
 const navAccount = document.querySelector(".navbar__account");
 const loginRegisterButton = document.querySelectorAll(".buttonOne");
@@ -33,6 +30,10 @@ function navChange() {
     accountIcon.forEach((icon) => {
       icon.classList.remove("hidden");
     });
+
+    logOutButton.forEach((btn) => {
+      btn.classList.remove("hidden");
+    });
   } else {
     // accountIcon.classList.add("hidden");
     loginRegisterButton.forEach((button) => {
@@ -40,6 +41,10 @@ function navChange() {
     });
     accountIcon.forEach((icon) => {
       icon.classList.add("hidden");
+    });
+
+    logOutButton.forEach((btn) => {
+      btn.classList.add("hidden");
     });
   }
 }

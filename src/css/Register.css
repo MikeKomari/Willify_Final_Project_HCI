@@ -264,9 +264,9 @@ input[type="checkbox"] {
   .ContentWrapper {
     display: block;
   }
-  .regisWrapper {
+  /* .regisWrapper {
     padding: 0;
-  }
+  } */
 }
 
 @media (max-width: 500px) {

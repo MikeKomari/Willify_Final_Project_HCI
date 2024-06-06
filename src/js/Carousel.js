@@ -8,9 +8,9 @@ const carouselContainerItems = document.querySelector(
 
 const MAX_IMAGE_INDEX = 12;
 let activeImage = 0;
-
 let scrollPos = 0;
 
+// If nextButton is clicked, scroll to the left
 nextButton.addEventListener("click", function (e) {
   scrollPos += 550;
 
@@ -24,15 +24,13 @@ nextButton.addEventListener("click", function (e) {
   console.log("haerin");
 });
 
+// If prevButton is clicked, the same mechanic but to the right. Thus, '-'.
 prevButton.addEventListener("click", function (e) {
   scrollPos -= 550;
 
   if (scrollPos <= 0) {
     scrollPos = 4550;
   }
-
-  // Calculate the position from the left
-  //   let leftPos = carouselContainer.scrollWidth - scrollPos;
 
   carouselContainer.scrollTo({
     left: scrollPos,

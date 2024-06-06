@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- Preloader -->
-    <div class="preloader hidden">
+    <div class="preloader">
       <div class="preloaderWrapper"></div>
 
       <div class="textWrapper">
@@ -149,6 +149,11 @@
             <a href="src/html/About Us.html"
               ><div class="navbar__navLink">
                 <h3 class="navbar__navText">About</h3>
+                <div class="navbar__navDecor"></div></div
+            ></a>
+            <a href="#"
+              ><div class="navbar__navLink logOutButton">
+                <h3 class="navbar__navText">Log Out</h3>
                 <div class="navbar__navDecor"></div></div
             ></a>
           </div>
@@ -344,8 +349,11 @@
           </a>
           <div class="trending__text">
             <h3 class="trending__quotes">
-              We are dedicated to expanding and spreading the love for music to
-              everyone.
+              Willify, a renowned music streaming platform, debuted in 2006.
+              Initially launched as a digital audio service, it quickly gained
+              prominence and has become a household name in the music world.
+              With a vision to revolutionize music consumption, Willify has
+              grown into a global phenomenon with millions of active users.
             </h3>
             <div class="pageBreak pageBreak__quotes"></div>
             <h3 class="trending__tag">#TRENDING2024</h3>
@@ -370,6 +378,47 @@
           </div>
           <div class="faq__content">
             <div class="faq__content--itemDiv">
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    What makes Willify's music library special?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  The platform is celebrated for its vast and diverse music
+                  library, offering users access to an extensive catalog
+                  spanning various genres, artists, and podcasts. A distinctive
+                  feature of Willify is its personalized approach, leveraging
+                  algorithms to curate playlists and recommendations tailored to
+                  individual tastes.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
+              <div class="faq__content--item">
+                <div class="faq__content--item--questionDiv">
+                  <h3 class="textTitle faq__content--item--question">
+                    What sets Willify apart from other music streaming services?
+                  </h3>
+                  <img
+                    class="faq__content--item--arrow"
+                    src="public/images/rightCarouselArrow.png"
+                    alt=""
+                  />
+                </div>
+                <h5 class="textDescription faq__content--item--answer">
+                  What sets Willify apart is its commitment to delivering a
+                  seamless and enjoyable music experience. The platform
+                  consistently incorporates cutting-edge streaming technology,
+                  ensuring high-quality audio for users, whether they are
+                  discovering new tracks or enjoying their favorite classics.
+                </h5>
+                <div class="faqPageBreak"></div>
+              </div>
               <div class="faq__content--item">
                 <div class="faq__content--item--questionDiv">
                   <h3 class="textTitle faq__content--item--question">
@@ -456,6 +505,9 @@
           </div>
         </div>
         <!-- bestSeller -->
+        <div class="bestSellerTextDiv">
+          <h1 class="bestSellerText">BEST SELLER</h1>
+        </div>
         <div class="bestSellerContainer">
           <div class="bestSellerItem songOne">
             <h2 class="rankingLabel">4th</h2>
@@ -474,7 +526,9 @@
           <div class="bestSellerItem songThree">
             <h2 class="rankingLabel">1st</h2>
             <div class="songName">
-              <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
+              <a href="src/html/save your tears.html">
+                <h3 class="songName__Text">Save Your Tears - The Weeknd</h3>
+              </a>
               <div class="pageBreakSong"></div>
             </div>
           </div>
@@ -498,7 +552,7 @@
       <div class="carouselContainer">
         <div class="carouselDecoration">
           <div class="carouselDecoration__left">
-            <h3 class="carouselDecoration__text">Discover What's New</h3>
+            <h3 class="carouselDecoration__text">Songs You Might Like</h3>
 
             <div class="arrowCarouselDiv">
               <a href="#" class="arrowCarouselLink">
@@ -569,7 +623,7 @@
               />
               <h3 class="carousel__itemText">NEW JEANS - OMG</h3>
             </div>
-            <a href="src/html/how sweet.html">
+            <a href="src/html/Song Detail.html">
               <div class="carousel__item">
                 <img
                   class="carousel__itemImage"

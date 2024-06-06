@@ -69,6 +69,10 @@ a {
   margin-right: 1rem;
 }
 
+.songText.text__producers.text__songDesc {
+  padding-top: 0.5rem;
+}
+
 .up__arrow {
   width: 40px;
   height: 40px;
@@ -280,7 +284,8 @@ a {
 }
 
 /* responsive */
-@media (max-width: 768px) {
+
+@media (max-width: 1500px) {
   body {
     font-size: 62.5% !important;
   }

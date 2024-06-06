@@ -20,7 +20,7 @@ const madeForYou = document.querySelector(".playlistDecoration__textMain");
 let playlistIndex = 0;
 
 function collectionUpdate() {
-  madeForYou.textContent = "Made For Michael Kimeison";
+  madeForYou.textContent = `Made for ${account.getLatestFirstName()}`;
   if (getAccountState() === 1) {
     playlistTitle.forEach((title) => {
       title.textContent = `Mix For You #${playlistIndex + 1}`;
@@ -43,3 +43,17 @@ function collectionUpdate() {
 }
 
 collectionUpdate();
+
+const songSearch = document.querySelector(".searchInput");
+const allSongs = document.querySelectorAll(".playlist__itemText");
+
+songSearch.addEventListener("input", function (e) {
+  let searchValue = e.target.value.toLowerCase();
+  allSongs.forEach((song) => {
+    if (song.textContent.toLowerCase().includes(searchValue)) {
+      song.parentElement.parentElement.parentElement.style.display = "block";
+    } else {
+      song.parentElement.parentElement.parentElement.style.display = "none";
+    }
+  });
+});

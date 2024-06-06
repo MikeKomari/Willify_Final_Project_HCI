@@ -23,9 +23,6 @@ let errorControl = [];
 const inputs = document.querySelectorAll("[data-form-input]");
 const invalid = document.querySelector(".login__invalid");
 const submitButtonLogin = document.querySelector(".submitButton--login");
-submitButtonLogin.addEventListener("click", function () {
-  console.log("haerin");
-});
 
 //error function
 function errorInput(
@@ -56,7 +53,6 @@ function errorValidationPassed(inputForParameter, errorMessageClass) {
   }
 }
 
-console.log("haerin");
 //main function
 const submit = submitButtonLogin.addEventListener("click", function (e) {
   e.preventDefault();
@@ -151,9 +147,12 @@ const submit = submitButtonLogin.addEventListener("click", function (e) {
 
   if (hasError) return;
 
+  let targetAccount = accountList.findAccount(tempAccount.email);
+
   if (
-    accountList.findAccount(tempAccount.email, tempAccount.password) ===
-    undefined
+    targetAccount === undefined ||
+    targetAccount.pass !== tempAccount.pass ||
+    targetAccount.email !== tempAccount.email
   ) {
     invalid.classList.remove("hidden");
     hasError = true;

@@ -33,5 +33,4 @@ setInterval(() => {
     left: scrollPos,
     behavior: "smooth",
   });
-  console.log(scrollPos);
 }, 150);

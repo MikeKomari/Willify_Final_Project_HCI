@@ -200,6 +200,12 @@ textarea {
   }
 }
 
+@keyframes appears {
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes curtainSidebar {
   0% {
     border-bottom-left-radius: 30%;

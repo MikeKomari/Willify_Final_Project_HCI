@@ -1,6 +1,7 @@
+//Account Object
 export class Account {
   constructor() {
-    // Retrieve the JSON frmo local storage
+    // Retrieve the JSON from local storage
     const accountJSON = localStorage.getItem("accounts");
 
     // Parse the JSON (if it exist)
@@ -11,12 +12,20 @@ export class Account {
     return this.accountList;
   }
 
+  //If there is an account with the same email and password, return the account
   findAccount(email, password) {
-    const targetAccount = this.accountList?.find(
-      (acc) => acc.email === email && acc.password === password
-    );
+    const targetAccount = this.accountList?.find((acc) => acc.email === email);
     if (!targetAccount) return undefined;
+    console.log(targetAccount);
     return targetAccount;
+  }
+
+  //If there is an account with the same username, return true
+  findUsername(username) {
+    const targetAccount = this.accountList?.find(
+      (acc) => acc.username === username
+    );
+    return targetAccount !== undefined;
   }
 
   add(account) {
