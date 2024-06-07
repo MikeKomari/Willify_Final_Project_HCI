@@ -42,8 +42,9 @@ const specialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 //array untuk mengisi
 let errorControl = [];
 
-//Mengambil variabel error yang mana, misalnya email, lalu mengambil class untuk validasi apakah ada errorMessage, jika ada, tidak di print kembali.
-//lalu mengambil message yang ingin di display, yang di passing dari object errorMessages
+//Taking 3 parameters, the input, the error message class, and the error message displayed
+//This function will insert the error message after the input
+//If the error message already exists, it will not insert the error message
 export function errorInput(
   inputForParameter,
   errorMessageClass,
@@ -61,6 +62,8 @@ export function errorInput(
   }
 }
 
+//Taking 2 parameters, the input and the error message class
+//This function will remove the error message if it exists / passed the validation
 export function errorValidationPassed(inputForParameter, errorMessageClass) {
   const existingErrorMessage = document.querySelector(
     `.${inputForParameter}InputControl + ${errorMessageClass}`
@@ -73,21 +76,24 @@ export function errorValidationPassed(inputForParameter, errorMessageClass) {
 
 const form = document.querySelector(".form");
 
+//main function
 const submit = submitButton.addEventListener("click", function (e) {
   e.preventDefault();
 
+  //flag
   let isError = false;
 
   const formValue = {};
 
   const newAccount = {};
 
+  //Looping through each input
   inputs.forEach((input) => {
     const inputForParameter = input.dataset.formInput;
     const formRule = input.dataset.formRule;
     let errorMessageClass;
 
-    //Validasi apakah ada input atau tidak
+    //if required and there's no input, push the input to errorControl
     if (formRule === "requiredToFill") {
       if (!input.value || (input.type === "checkbox" && !input.checked)) {
         if (!errorControl.includes(inputForParameter)) {
@@ -114,7 +120,8 @@ const submit = submitButton.addEventListener("click", function (e) {
       newAccount[`${inputForParameter}`] = input.value;
     }
 
-    // validasi username
+    // Username validation
+    // Check if the username is already taken
     if (inputForParameter === "username") {
       let usernameTaken = accountList.findUsername(input.value);
 
@@ -132,7 +139,8 @@ const submit = submitButton.addEventListener("click", function (e) {
       }
     }
 
-    //validasi email
+    //Email validation
+    //Check if the email is in the right format
     if (inputForParameter === "email") {
       if (input.value.includes("@") && input.value.includes(".")) {
         newAccount[`${inputForParameter}`] = input.value;
@@ -144,8 +152,10 @@ const submit = submitButton.addEventListener("click", function (e) {
       }
     }
 
-    //validasi password
+    //Password Validation
+    //Check if the password is 8 characters long, has 1 digit, 1 upper and lowercase, and 1 special character
     if (inputForParameter === "pass") {
+      //FLAGS
       let hasDigit = false;
       let hasUpper = false;
       let hasLower = false;
@@ -185,7 +195,8 @@ const submit = submitButton.addEventListener("click", function (e) {
       }
     }
 
-    //validasdi pass confirmation
+    //Pass confirmation validation
+    //Check if the password matches the confirmation password
     if (inputForParameter === "pass2") {
       if (newAccount["pass"] && newAccount["pass2"]) {
         errorMessageClass = `.form__errorMessage .pass2Regex`;
@@ -205,15 +216,21 @@ const submit = submitButton.addEventListener("click", function (e) {
     }
   });
 
+  //call the function to display error message
   showError(errorControl);
+
+  //if true, it means there's an error, return
   if (isError) return;
 
+  //if there's no error, push the newAccount to accountList
   accountList.add(newAccount);
 
+  //set the account state to login
   accountStateLogin();
   window.location.href = "HomePage.html";
 });
 
+//Function to display error message
 function showError(errorControl) {
   errorControl.forEach((errorValue) => {
     let errorMessageTemp;

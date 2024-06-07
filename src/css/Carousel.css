@@ -181,6 +181,13 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .carousel__item {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 @media (max-width: 500px) {
   .carousel__item {
     width: 300px;

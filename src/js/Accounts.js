@@ -1,20 +1,21 @@
 //Not login === 0, login === 1
 export let accountState = 0;
 
+//If created account / login, account state = 1
 export function accountStateLogin() {
   localStorage.setItem("accountState", 1);
 }
 
+//If log out / no account, account state = 0
 export function accountStateLogout() {
   localStorage.setItem("accountState", 0);
-  // accountState = 0;
 }
 
 export function getAccountState() {
   return Number(localStorage.getItem("accountState"));
 }
 
-export const accounts = []; //object untukmengisi data akun
+export const accounts = []; //Array to store accounts
 
 //navbar change
 const navAccount = document.querySelector(".navbar__account");
@@ -35,7 +36,6 @@ function navChange() {
       btn.classList.remove("hidden");
     });
   } else {
-    // accountIcon.classList.add("hidden");
     loginRegisterButton.forEach((button) => {
       button.classList.remove("hidden");
     });

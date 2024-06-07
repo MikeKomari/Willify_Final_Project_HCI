@@ -1,4 +1,3 @@
-// import { errorInput, errorValidationPassed } from "../js/Register.js";
 import { accountStateLogin, accountStateLogout } from "../js/Accounts.js";
 
 import { Account } from "../js/Auth.js";
@@ -24,7 +23,9 @@ const inputs = document.querySelectorAll("[data-form-input]");
 const invalid = document.querySelector(".login__invalid");
 const submitButtonLogin = document.querySelector(".submitButton--login");
 
-//error function
+//Taking 3 parameters, the input, the error message class, and the error message displayed
+//This function will insert the error message after the input
+//If the error message already exists, it will not insert the error message
 function errorInput(
   inputForParameter,
   errorMessageClass,
@@ -43,6 +44,8 @@ function errorInput(
   }
 }
 
+//Taking 2 parameters, the input and the error message class
+//This function will remove the error message if it exists / passed the validation
 function errorValidationPassed(inputForParameter, errorMessageClass) {
   const existingErrorMessage = document.querySelector(
     `.${inputForParameter}InputControl + ${errorMessageClass}`
@@ -58,15 +61,16 @@ const submit = submitButtonLogin.addEventListener("click", function (e) {
   e.preventDefault();
 
   const tempAccount = {};
-
+  //flag
   let hasError = false;
 
+  //Looping through each input
   inputs.forEach((input) => {
     const inputForParameter = input.dataset.formInput;
     const formRule = input.dataset.formRule;
     let errorMessageClass;
 
-    //Validasi apakah ada input atau tidak
+    //if required and there's no input, push the input to errorControl
     if (formRule === "requiredToFill") {
       if (!input.value) {
         if (!errorControl.includes(inputForParameter)) {
@@ -88,7 +92,8 @@ const submit = submitButtonLogin.addEventListener("click", function (e) {
       tempAccount[`${inputForParameter}`] = input.value;
     }
 
-    //validasi email
+    //Email validation
+    //Check if the email is in the right format
     if (inputForParameter === "email") {
       if (input.value.includes("@") && input.value.includes(".")) {
         tempAccount[`${inputForParameter}`] = input.value;
@@ -100,13 +105,15 @@ const submit = submitButtonLogin.addEventListener("click", function (e) {
       }
     }
 
-    //validasi password
+    //Password Validation
+    //Check if the password is 8 characters long, has 1 digit, 1 upper and lowercase, and 1 special character
     if (inputForParameter === "pass") {
       let hasDigit = false;
       let hasUpper = false;
       let hasLower = false;
       let hasSpecial = false;
 
+      //loop through each input
       for (let i = 0; i < input.value.length; i++) {
         let char = input.value[i];
 
@@ -142,7 +149,6 @@ const submit = submitButtonLogin.addEventListener("click", function (e) {
     }
   });
 
-  console.log(errorControl);
   showErrorLogin(errorControl);
 
   if (hasError) return;

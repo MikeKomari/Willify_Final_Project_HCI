@@ -156,14 +156,14 @@
   color: var(--four);
   font-weight: 700;
   padding-right: 5px;
-  z-index: 9999;
+  z-index: 199;
 
   font-size: small;
 }
 
 .secondary {
   color: black;
-  z-index: 9999;
+  z-index: 199;
   font-size: small;
   padding-right: 3px;
 }

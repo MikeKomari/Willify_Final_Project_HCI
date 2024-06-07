@@ -44,9 +44,12 @@ function collectionUpdate() {
 
 collectionUpdate();
 
+//Search song
 const songSearch = document.querySelector(".searchInput");
-const allSongs = document.querySelectorAll(".playlist__itemText");
+const allSongs = document.querySelectorAll(".playlist__itemText .browseAll");
 
+//While inputting, filter the songs
+//Remove the song that is not included in the search value
 songSearch.addEventListener("input", function (e) {
   let searchValue = e.target.value.toLowerCase();
   allSongs.forEach((song) => {

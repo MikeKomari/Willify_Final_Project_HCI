@@ -79,7 +79,7 @@
   padding: 1rem 0;
   border-radius: 10px;
   border: none;
-  background-color: hsl(26, 100%, 55%);
+  background-color: var(--one);
   color: white;
   font-weight: 700;
   cursor: pointer;
@@ -95,46 +95,4 @@
 .product_name {
   font-size: 2.7rem;
   padding-bottom: 30px;
-}
-
-.description {
-  font-size: 16px;
-  color: hsl(219, 9%, 45%);
-  padding-bottom: 20px;
-}
-
-.price_discount {
-  display: flex;
-  /* background-color: aqua; */
-  width: 11rem;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-
-  gap: 1rem;
-}
-
-.discount {
-  display: flex;
-  text-align: center;
-  font-size: 1em;
-  padding: 0.2rem 0.5rem;
-}
-
-.discount {
-  color: hsl(26, 100%, 55%);
-  background: hsla(26, 100%, 55%, 0.12);
-  border-radius: 5px;
-}
-
-.before_price {
-  padding-top: 10px;
-  color: hsla(217, 9%, 45%, 0.461);
-  text-decoration: line-through;
-  padding-bottom: 30px;
-}
-
-.hero_button {
-  display: flex;
-  gap: 1rem;
 }

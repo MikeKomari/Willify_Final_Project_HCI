@@ -107,3 +107,12 @@
     padding-bottom: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .about__quote {
+    font-size: 1.5rem;
+  }
+  .about__title {
+    font-size: 3rem;
+  }
+}
